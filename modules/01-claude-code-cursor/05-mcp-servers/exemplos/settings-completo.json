@@ -1,0 +1,98 @@
+{
+  // Exemplo COMPLETO: settings.json com múltiplos MCP Servers
+  //
+  // ATENÇÃO: Este arquivo é apenas referência.
+  // - Copie para .claude/settings.json
+  // - Remova os servers que não usar
+  // - Tokens sensíveis devem ir em settings.local.json (não commitar)
+  //
+  // Todos os tokens abaixo devem ser variáveis de ambiente.
+  // Veja settings.local.example.json para saber como configurar.
+
+  "mcpServers": {
+
+    // ─── CONTROLE DE VERSÃO ────────────────────────────────────────────────
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
+      }
+      // Capacidades: ler/criar issues, PRs, comentários, reviews, commits
+    },
+
+    // ─── BANCO DE DADOS ────────────────────────────────────────────────────
+    "postgres": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres"],
+      "env": {
+        "POSTGRES_CONNECTION_STRING": "${DATABASE_URL}"
+      }
+      // Capacidades: executar queries, ver schema, explorar dados
+      // CUIDADO: Configure um usuário de banco com permissões mínimas (read-only se possível)
+    },
+
+    // ─── SISTEMA DE ARQUIVOS ───────────────────────────────────────────────
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/tmp",
+        "${HOME}/Documents/relatorios"
+      ]
+      // Capacidades: ler e escrever arquivos nos diretórios listados
+      // Útil para acessar arquivos fora do projeto
+    },
+
+    // ─── COMUNICAÇÃO ──────────────────────────────────────────────────────
+    "slack": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-slack"],
+      "env": {
+        "SLACK_BOT_TOKEN": "${SLACK_BOT_TOKEN}",
+        "SLACK_TEAM_ID": "${SLACK_TEAM_ID}"
+      }
+      // Capacidades: ler mensagens, enviar notificações, buscar em canais
+    },
+
+    // ─── GERENCIAMENTO DE PROJETOS ─────────────────────────────────────────
+    "linear": {
+      "command": "npx",
+      "args": ["-y", "@linear/mcp-server"],
+      "env": {
+        "LINEAR_API_KEY": "${LINEAR_API_KEY}"
+      }
+      // Capacidades: criar/atualizar issues, gerenciar projetos, estimativas
+    },
+
+    // ─── INFRAESTRUTURA ───────────────────────────────────────────────────
+    "terraform": {
+      "command": "npx",
+      "args": ["-y", "@hashicorp/terraform-mcp-server"],
+      "env": {
+        "TFC_TOKEN": "${TERRAFORM_TOKEN}"
+      }
+      // Capacidades: gerenciar workspaces, runs, variáveis no HCP Terraform
+    },
+
+    // ─── BUSCA NA WEB ──────────────────────────────────────────────────────
+    "brave-search": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-brave-search"],
+      "env": {
+        "BRAVE_API_KEY": "${BRAVE_API_KEY}"
+      }
+      // Capacidades: busca na web, útil para pesquisar documentação
+    }
+  },
+
+  "permissions": {
+    "allow": [
+      "Bash(git:*)",
+      "Bash(npm:*)",
+      "Bash(python:*)",
+      "Read(*)"
+    ]
+  }
+}

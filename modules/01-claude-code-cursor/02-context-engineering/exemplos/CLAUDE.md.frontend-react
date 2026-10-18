@@ -1,0 +1,146 @@
+> **[EXEMPLO] Como usar este arquivo**
+>
+> | | |
+> |---|---|
+> | **Onde salvar** | Raiz do seu projeto frontend como `CLAUDE.md` (não com a extensão `.frontend-react`) |
+> | **Escopo** | Vale apenas para o projeto onde o arquivo está salvo |
+> | **Como ativar** | O Claude Code lê automaticamente ao abrir o projeto |
+>
+> **Passo a passo:**
+> ```bash
+> # 1. Copie o arquivo para a raiz do seu projeto
+> cp CLAUDE.md.frontend-react /caminho/do/seu-frontend/CLAUDE.md
+>
+> # 2. Adapte o conteúdo para o seu projeto real:
+> #    - Atualize a stack (versões corretas, bibliotecas que você usa)
+> #    - Atualize os scripts npm (verifique seu package.json)
+> #    - Atualize a estrutura de pastas
+> #    - Atualize as variáveis de ambiente (VITE_*, NEXT_PUBLIC_*, etc.)
+>
+> # 3. Abra o Claude Code dentro do projeto
+> cd /seu-frontend
+> claude
+> ```
+>
+> **Como testar:**
+> ```bash
+> > como devo buscar a lista de pedidos neste projeto?
+> # Resposta esperada: "Crie um hook em features/pedidos/hooks/usePedidosQuery.ts
+> #                    usando TanStack Query — não faça fetch direto no componente"
+>
+> > onde coloco lógica de negócio de formatação de preço?
+> # Resposta esperada: "Em src/lib/utils.ts ou em um hook customizado,
+> #                    nunca dentro do componente"
+> ```
+> Se a IA responder respeitando as convenções do projeto, o contexto está funcionando.
+
+---
+
+# Frontend de Pedidos — Contexto do Projeto
+
+## O que é este projeto
+Interface web para gestão de pedidos. SPA em React com TypeScript,
+consumindo a API REST do projeto `api-pedidos`.
+
+## Stack
+- React 18 + TypeScript 5
+- Vite (bundler)
+- TanStack Query v5 (estado servidor)
+- Zustand (estado local)
+- Tailwind CSS 3
+- shadcn/ui (componentes base)
+- Vitest + Testing Library (testes)
+
+## Como Rodar
+
+```bash
+# Instalar dependências
+npm install
+
+# Rodar em desenvolvimento (requer API rodando em :8000)
+npm run dev
+
+# Build de produção
+npm run build
+
+# Preview do build
+npm run preview
+```
+
+## Como Testar
+
+```bash
+# Todos os testes
+npm test
+
+# Com interface visual
+npm run test:ui
+
+# Cobertura
+npm run test:coverage
+
+# Testes E2E (Playwright)
+npm run test:e2e
+```
+
+## Estrutura de Pastas
+
+```
+frontend/
+├── src/
+│   ├── components/        ← componentes reutilizáveis (sem lógica de negócio)
+│   │   ├── ui/            ← componentes base (shadcn/ui customizados)
+│   │   └── shared/        ← componentes compartilhados entre features
+│   ├── features/          ← agrupamento por domínio
+│   │   ├── pedidos/
+│   │   │   ├── components/
+│   │   │   ├── hooks/
+│   │   │   ├── stores/
+│   │   │   └── types.ts
+│   │   └── usuarios/
+│   ├── lib/               ← utilitários e configurações
+│   │   ├── api.ts         ← cliente HTTP (axios configurado)
+│   │   └── utils.ts
+│   ├── pages/             ← componentes de rota
+│   └── main.tsx
+├── tests/
+│   ├── unit/
+│   └── e2e/
+└── vite.config.ts
+```
+
+## Convenções
+
+### Componentes
+- Functional components com TypeScript
+- Props sempre tipadas com interface separada: `interface PedidoCardProps`
+- Componentes em PascalCase: `PedidoCard.tsx`
+- Um componente por arquivo
+
+### Estado
+- Estado do servidor → TanStack Query (cache automático, revalidação)
+- Estado de UI local → `useState` ou Zustand (para estado compartilhado)
+- Nunca buscar dados diretamente em componentes — sempre via hooks customizados
+
+### Queries e Mutations
+- Queries ficam em `features/<dominio>/hooks/use<Entidade>Query.ts`
+- Mutations ficam em `features/<dominio>/hooks/use<Entidade>Mutation.ts`
+
+### Estilo
+- Tailwind para tudo — sem CSS-in-JS, sem módulos CSS
+- Variantes com `class-variance-authority` (cva)
+- Não usar `style={{ }}` inline, exceto para valores dinâmicos impossíveis no Tailwind
+
+## Variáveis de Ambiente
+
+```bash
+VITE_API_URL=http://localhost:8000   # URL da API backend
+VITE_APP_ENV=development             # development | staging | production
+```
+
+## Antipadrões — NÃO FAZER
+
+- Não fazer `fetch` diretamente em componentes
+- Não usar `any` como tipo TypeScript — prefira `unknown` e type guards
+- Não colocar lógica de negócio em componentes — extraia para hooks
+- Não usar `useEffect` para sincronizar estado derivado — compute diretamente

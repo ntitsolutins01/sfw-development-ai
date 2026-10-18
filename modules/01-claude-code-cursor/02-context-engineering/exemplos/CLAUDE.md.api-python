@@ -1,0 +1,143 @@
+> **[EXEMPLO] Como usar este arquivo**
+>
+> | | |
+> |---|---|
+> | **Onde salvar** | Raiz do seu projeto como `CLAUDE.md` (não com a extensão `.api-python`) |
+> | **Escopo** | Vale apenas para o projeto onde o arquivo está salvo |
+> | **Como ativar** | O Claude Code lê automaticamente ao abrir o projeto |
+>
+> **Passo a passo:**
+> ```bash
+> # 1. Copie o arquivo para a raiz do seu projeto
+> cp CLAUDE.md.api-python /caminho/do/seu-projeto/CLAUDE.md
+>
+> # 2. Adapte o conteúdo para o seu projeto real:
+> #    - Atualize a stack (versões corretas)
+> #    - Atualize os comandos de instalação e teste
+> #    - Atualize a estrutura de pastas
+> #    - Adicione as variáveis de ambiente do seu .env
+>
+> # 3. Abra o Claude Code dentro do projeto
+> cd /seu-projeto
+> claude
+> ```
+>
+> **Como testar:**
+> ```bash
+> > qual o comando para rodar só os testes do módulo de pedidos?
+> # Resposta esperada: "pytest apps/pedidos/tests/"
+>
+> > onde devo colocar a regra de negócio para calcular o frete?
+> # Resposta esperada: "em services.py, não em views ou serializers"
+> ```
+> Se a IA responder sem você explicar a estrutura, o contexto está funcionando.
+
+---
+
+# API de Pedidos — Contexto do Projeto
+
+## O que é este projeto
+API REST para gerenciamento de pedidos de e-commerce.
+Backend em Python/Django, banco PostgreSQL, cache Redis.
+
+## Stack
+- Python 3.11
+- Django 5.0 + Django REST Framework 3.15
+- PostgreSQL 16
+- Redis 7 (cache e filas)
+- Celery (tarefas assíncronas)
+- pytest + factory_boy (testes)
+
+## Como Rodar
+
+```bash
+# 1. Instalar dependências
+pip install -r requirements.txt
+
+# 2. Copiar variáveis de ambiente
+cp .env.example .env
+
+# 3. Subir banco e redis via Docker
+docker compose up -d db redis
+
+# 4. Rodar migrations
+python manage.py migrate
+
+# 5. Iniciar servidor de desenvolvimento
+python manage.py runserver
+```
+
+## Como Testar
+
+```bash
+# Todos os testes
+pytest
+
+# Com cobertura
+pytest --cov=apps --cov-report=html
+
+# Só um módulo
+pytest apps/pedidos/tests/
+
+# Testes rápidos (sem integração com banco)
+pytest -m "not integration"
+```
+
+## Estrutura de Pastas
+
+```
+api-pedidos/
+├── apps/
+│   ├── pedidos/           ← domínio principal
+│   │   ├── models.py
+│   │   ├── serializers.py
+│   │   ├── views.py
+│   │   ├── services.py    ← regras de negócio ficam aqui
+│   │   ├── tasks.py       ← tarefas celery
+│   │   └── tests/
+│   ├── usuarios/
+│   └── pagamentos/
+├── config/
+│   ├── settings/
+│   │   ├── base.py
+│   │   ├── development.py
+│   │   └── production.py
+│   └── urls.py
+├── docker-compose.yml
+└── requirements.txt
+```
+
+## Convenções
+
+### Nomes
+- Models: singular, PascalCase (`Pedido`, `ItemPedido`)
+- Views: PascalCase com sufixo (`PedidoListView`, `PedidoDetailView`)
+- Services: snake_case (`calcular_total_pedido`, `aplicar_desconto`)
+- URLs: kebab-case (`/api/pedidos/`, `/api/pedidos/{id}/itens/`)
+
+### Regras de Negócio
+- NUNCA colocar regra de negócio em views ou serializers
+- Toda lógica vai em `services.py`
+- Toda comunicação entre apps vai via eventos (sinais Django)
+
+### Banco de Dados
+- Toda nova tabela precisa de migration
+- NUNCA modificar migrations já aplicadas em produção
+- Queries pesadas devem usar `select_related`/`prefetch_related`
+
+## Variáveis de Ambiente Necessárias
+
+```bash
+SECRET_KEY=          # Django secret key
+DATABASE_URL=        # postgresql://user:pass@host:port/dbname
+REDIS_URL=           # redis://localhost:6379/0
+DEBUG=               # True em desenvolvimento, False em produção
+ALLOWED_HOSTS=       # hosts separados por vírgula
+```
+
+## Antipadrões — NÃO FAZER
+
+- Não usar `Pedido.objects.all()` sem paginação
+- Não fazer queries dentro de loops (problema N+1)
+- Não colocar lógica de negócio no `serializer.validate()`
+- Não usar `null=True` em campos CharField

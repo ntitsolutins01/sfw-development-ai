@@ -1,0 +1,75 @@
+{
+  // ATENÇÃO: JSON não suporta comentários nativamente.
+  // Este arquivo é apenas para referência — copie e remova os comentários.
+  // Salve como: .claude/settings.json no seu projeto
+
+  "permissions": {
+    "allow": [
+
+      // ─── GIT ────────────────────────────────────────────────────────────────
+      "Bash(git status:*)",          // ver estado do repositório
+      "Bash(git diff:*)",            // ver diferenças
+      "Bash(git log:*)",             // ver histórico
+      "Bash(git add:*)",             // stage de arquivos
+      "Bash(git commit:*)",          // criar commits
+      "Bash(git checkout:*)",        // trocar branches
+      "Bash(git branch:*)",          // gerenciar branches
+      "Bash(git pull:*)",            // atualizar do remoto
+      "Bash(git fetch:*)",           // buscar sem merge
+
+      // ─── NODE / NPM ─────────────────────────────────────────────────────────
+      "Bash(npm install:*)",         // instalar dependências
+      "Bash(npm run:*)",             // rodar scripts do package.json
+      "Bash(npm test:*)",            // rodar testes
+      "Bash(npx:*)",                 // executar pacotes npx
+      "Bash(node:*)",                // rodar scripts node
+
+      // ─── PYTHON ─────────────────────────────────────────────────────────────
+      "Bash(python:*)",              // rodar scripts python
+      "Bash(python3:*)",             // rodar scripts python3
+      "Bash(pip install:*)",         // instalar pacotes
+      "Bash(pytest:*)",              // rodar testes pytest
+      "Bash(uv:*)",                  // gerenciador uv (moderno)
+
+      // ─── LEITURA DE ARQUIVOS ─────────────────────────────────────────────────
+      "Read(*)",                     // ler qualquer arquivo do projeto
+      "Bash(ls:*)",                  // listar diretórios
+      "Bash(find:*)",                // buscar arquivos
+
+      // ─── EDIÇÃO (restrita ao código-fonte) ───────────────────────────────────
+      "Edit(src/**)",                // editar dentro de src/
+      "Edit(tests/**)",              // editar dentro de tests/
+      "Edit(*.md)",                  // editar markdowns na raiz
+      "Write(src/**)",               // criar arquivos em src/
+      "Write(tests/**)",             // criar arquivos em tests/
+
+      // ─── FERRAMENTAS DE QUALIDADE ─────────────────────────────────────────────
+      "Bash(eslint:*)",              // linter JavaScript
+      "Bash(ruff:*)",                // linter Python rápido
+      "Bash(mypy:*)",                // type checker Python
+      "Bash(black:*)",               // formatter Python
+
+      // ─── DOCKER (se o projeto usar) ───────────────────────────────────────────
+      "Bash(docker compose up:*)",
+      "Bash(docker compose down:*)",
+      "Bash(docker build:*)"
+    ],
+
+    "deny": [
+      // ─── OPERAÇÕES DESTRUTIVAS (sempre negar) ────────────────────────────────
+      "Bash(rm -rf:*)",              // deletar recursivo sem confirmação
+      "Bash(git push --force:*)",    // force push (perigoso)
+      "Bash(git reset --hard:*)",    // descartar mudanças sem confirmação
+      "Bash(DROP TABLE:*)",          // comandos destrutivos de banco
+      "Bash(truncate:*)"             // truncar arquivos/tabelas
+    ]
+  },
+
+  // ─── MODELO (opcional) ────────────────────────────────────────────────────
+  // Sobrescreve o modelo padrão para este projeto
+  // "model": "claude-sonnet-4-6",
+
+  // ─── CONTEXTO MÁXIMO (opcional) ───────────────────────────────────────────
+  // Limita tokens por chamada — útil para projetos com arquivos grandes
+  // "maxTokens": 8192
+}

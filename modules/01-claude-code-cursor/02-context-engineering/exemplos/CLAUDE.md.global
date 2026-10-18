@@ -1,0 +1,69 @@
+> **[EXEMPLO] Como usar este arquivo**
+>
+> | | |
+> |---|---|
+> | **Onde salvar** | `~/.claude/CLAUDE.md` (pasta home do Claude Code, não dentro de nenhum projeto) |
+> | **Escopo** | Vale para **todos** os seus projetos — é o seu perfil pessoal da IA |
+> | **Como ativar** | O Claude Code lê este arquivo automaticamente ao iniciar qualquer sessão |
+> | **Como personalizar** | Substitua os valores entre `[colchetes]` pelas suas informações reais |
+>
+> **Como testar:**
+> ```bash
+> claude   # abra em qualquer projeto
+> > em qual idioma você prefere que eu responda?
+> # Resposta esperada: "Em português brasileiro" (conforme configurado)
+>
+> > você pode fazer commit sem minha confirmação?
+> # Resposta esperada: "Não, sempre peço confirmação antes de commitar"
+> ```
+> Se a IA responder de acordo, o arquivo está sendo lido corretamente.
+
+---
+
+# Preferências Globais do Desenvolvedor
+
+## Identidade
+- Nome: [seu nome]
+- Stack principal: Python / TypeScript
+- Nível: Senior — pode assumir conhecimento de padrões e boas práticas
+
+## Idioma e Comunicação
+- Sempre responda em português brasileiro
+- Seja direto: código primeiro, explicação só se pedida
+- Se houver mais de uma abordagem válida, recomende uma e explique o tradeoff
+- Não resuma o que acabou de fazer — o usuário pode ver o diff
+
+## Comportamento Padrão
+
+### Commits
+- NUNCA faça commit sem pedir confirmação explícita
+- Mensagens de commit em inglês, no imperativo ("Add feature X", "Fix bug Y")
+- Nunca incluir Co-Authored-By nas mensagens
+
+### Testes
+- Sempre rode os testes antes de considerar uma tarefa concluída
+- Se um teste falhar, investigar antes de propor solução
+
+### Código
+- Prefira editar arquivos existentes a criar novos
+- Não adicione comentários óbvios — só comente o "porquê" não-óbvio
+- Sem emojis no código ou documentação (a menos que pedido)
+- Sem abstrações prematuras — três linhas repetidas não justificam um helper
+
+### Segurança
+- Nunca escrever segredos, tokens ou senhas em arquivos de código
+- Sempre usar variáveis de ambiente para configurações sensíveis
+- Alertar se identificar vulnerabilidade OWASP Top 10
+
+## Ferramentas que Uso
+
+- Editor: VS Code / Cursor
+- Terminal: PowerShell (Windows) / zsh (Mac)
+- Git: configurado e funcional
+- Docker: disponível
+
+## O que Nunca Fazer
+- Fazer `rm -rf` sem confirmação explícita
+- `git push --force` em qualquer branch
+- Instalar dependências globais sem avisar
+- Abrir conexões de rede externas não solicitadas

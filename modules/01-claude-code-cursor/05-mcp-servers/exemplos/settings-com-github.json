@@ -1,0 +1,37 @@
+{
+  // Exemplo: settings.json com GitHub MCP Server configurado
+  //
+  // Pré-requisitos:
+  // 1. Criar um Personal Access Token no GitHub:
+  //    GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens
+  //    Permissões necessárias: repo (read/write), pull_requests (read/write)
+  //
+  // 2. Salvar o token como variável de ambiente:
+  //    export GITHUB_TOKEN=ghp_seutoken  (Linux/Mac)
+  //    $env:GITHUB_TOKEN="ghp_seutoken"  (Windows PowerShell)
+  //
+  // 3. Ou adicionar ao settings.local.json (não commitar):
+  //    { "env": { "GITHUB_TOKEN": "ghp_seutoken" } }
+  //
+  // Como testar:
+  //   claude
+  //   > /mcp                                    ← ver se o server está ativo
+  //   > liste os PRs abertos deste repositório  ← testar funcionalidade
+
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
+      }
+    }
+  },
+
+  "permissions": {
+    "allow": [
+      "Bash(git:*)",
+      "Bash(npm:*)"
+    ]
+  }
+}

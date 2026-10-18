@@ -1,0 +1,58 @@
+[
+  // keybindings.json — atalhos personalizados do Claude Code
+  //
+  // Salve em: ~/.claude/keybindings.json  (global, vale para todos os projetos)
+  //
+  // Formato de cada entrada:
+  // {
+  //   "key": "modificador+tecla",   ← atalho
+  //   "command": "nome-do-comando", ← ação
+  //   "args": { ... }               ← argumentos opcionais
+  // }
+  //
+  // Modificadores disponíveis: ctrl, shift, alt, meta (cmd no Mac)
+
+  // ─── SKILLS RÁPIDAS ──────────────────────────────────────────────────────────
+  {
+    "key": "ctrl+shift+r",
+    "command": "claude:run-skill",
+    "args": { "skill": "code-review" },
+    "description": "Inicia revisão de código no branch atual"
+  },
+  {
+    "key": "ctrl+shift+t",
+    "command": "claude:run-skill",
+    "args": { "skill": "run" },
+    "description": "Inicia e testa a aplicação"
+  },
+  {
+    "key": "ctrl+shift+s",
+    "command": "claude:run-skill",
+    "args": { "skill": "security-review" },
+    "description": "Inicia revisão de segurança (OWASP)"
+  },
+
+  // ─── NAVEGAÇÃO ────────────────────────────────────────────────────────────────
+  {
+    "key": "ctrl+shift+c",
+    "command": "claude:clear",
+    "description": "Limpa o contexto da conversa atual"
+  },
+  {
+    "key": "ctrl+shift+h",
+    "command": "claude:show-history",
+    "description": "Mostra histórico de conversas"
+  },
+
+  // ─── SUBMISSÃO ────────────────────────────────────────────────────────────────
+  {
+    "key": "ctrl+enter",
+    "command": "claude:submit",
+    "description": "Envia mensagem (alternativa ao Enter)"
+  },
+  {
+    "key": "shift+enter",
+    "command": "claude:newline",
+    "description": "Quebra de linha sem enviar a mensagem"
+  }
+]

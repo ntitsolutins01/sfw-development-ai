@@ -1,0 +1,31 @@
+{
+  // settings.local.json — configurações LOCAIS e PRIVADAS
+  //
+  // NUNCA commitar este arquivo! Adicione ao .gitignore:
+  //   .claude/settings.local.json
+  //
+  // Use para: tokens de API, caminhos locais, configurações pessoais
+  // que não devem ser compartilhadas com o time.
+
+  "env": {
+    // Tokens de API para MCP Servers
+    "GITHUB_TOKEN": "ghp_seu_token_aqui",
+    "LINEAR_API_KEY": "lin_api_seu_token_aqui",
+    "SLACK_BOT_TOKEN": "xoxb-seu-token-aqui",
+    "TELEGRAM_BOT_TOKEN": "seu_token_telegram",
+
+    // Banco de dados local
+    "DATABASE_URL": "postgresql://localhost:5432/meu_banco_dev",
+
+    // Caminho para ferramentas locais
+    "PYTHON_PATH": "/usr/local/bin/python3.11"
+  },
+
+  "permissions": {
+    "allow": [
+      // Permissões extras só para a sua máquina (não para CI/CD)
+      "Bash(open:*)",     // abrir arquivos no macOS
+      "Bash(explorer:*)"  // abrir arquivos no Windows
+    ]
+  }
+}
