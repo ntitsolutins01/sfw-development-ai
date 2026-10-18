@@ -5,6 +5,16 @@
 
 ---
 
+## 💬 Comentário
+
+> Postar como comentário no post de lançamento da série (https://lnkd.in/p/dpJ8fi3V):
+
+**PT:** Módulo 2 publicado — Spec Driven Development com fluxo expandido: `/brainstorm`, `/escrever-prd`, `/escrever-trd`, 4 templates de spec e 6 prompts para cada fase do ciclo. O spec é o contrato que impede a IA de improvisar onde não deve. [link deste post]
+
+**EN:** Module 2 is up — Spec Driven Development with an expanded pre-spec flow: `/brainstorm`, `/escrever-prd`, `/escrever-trd`, 4 spec templates, and 6 prompts for each phase. The spec is the contract that keeps the AI from improvising where it shouldn't. [link deste post]
+
+---
+
 ## PUBLICAÇÃO — PORTUGUÊS
 
 Adicionei o Módulo 2 ao AIAD — Spec Driven Development com um fluxo expandido que vai do brainstorm ao código.
@@ -14,8 +24,6 @@ Adicionei o Módulo 2 ao AIAD — Spec Driven Development com um fluxo expandido
 🔍 O fluxo expandido vai além do spec técnico: `/brainstorm` matura a ideia antes de qualquer implementação (dois modos: generalista e spec lens), `/escrever-prd` gera um PRD draft-first em `docs/prds/NNN-nome.md` com user stories, critérios de aceite e métricas, e `/escrever-trd` cria um TRD global único por projeto em `docs/trd.md` com stack, arquitetura, NFRs e ADRs. As três são skills do Claude Code instaladas em `.claude/skills/` — não são comandos globais, são contexto de projeto. O módulo inclui 4 templates de spec (feature, bugfix, refactor, api-endpoint), 6 prompts prontos para cada fase do ciclo e 3 specs reais preenchidos como referência.
 
 📌 Qual é o maior custo de implementar sem spec em times que usam IA? Na minha experiência, não é o retrabalho — é o código correto que resolve o problema errado. O spec força a clareza antes que a IA entre no loop. Qual estratégia você usa para garantir que a IA implementa o que você realmente quer? Troca nos comentários.
-
-🐙 GitHub: https://github.com/ntitsolutins01/sfw-development-ai
 
 #SpecDrivenDevelopment #ClaudeCode #AIEngineering #PromptEngineering #SoftwareEngineering #TDD #GenerativeAI #LLMOps #Python #NodeJS #DevWorkflow #ProductRequirements #TechnicalSpec #AIAssisted #OpenSource
 
@@ -30,8 +38,6 @@ Added Module 2 to AIAD — Spec Driven Development with an expanded pre-spec flo
 🔍 The expanded flow adds a pre-spec layer: `/brainstorm` matures the idea before any implementation (two modes: generalist and spec lens), `/escrever-prd` generates a draft-first PRD at `docs/prds/NNN-name.md` with user stories, acceptance criteria, and metrics, and `/escrever-trd` creates a single global TRD at `docs/trd.md` with stack, architecture, NFRs, and ADRs. All three are Claude Code project-level skills installed in `.claude/skills/` — not global commands, project context. The module ships with 4 spec templates (feature, bugfix, refactor, api-endpoint), 6 ready prompts for each cycle phase, and 3 real filled-in specs as reference.
 
 📌 What's the real cost of implementing without a spec when your team uses AI? In my experience, it's not rework — it's correct code solving the wrong problem. The spec forces clarity before the AI enters the loop. What's your strategy for ensuring the AI implements what you actually want? Drop it in the comments.
-
-🐙 GitHub: https://github.com/ntitsolutins01/sfw-development-ai
 
 #SpecDrivenDevelopment #ClaudeCode #AIEngineering #PromptEngineering #SoftwareEngineering #GenerativeAI #LLMOps #ProductRequirements #TechnicalSpec #AIAssisted #Python #NodeJS #DevWorkflow #RequirementsEngineering #OpenSource
 

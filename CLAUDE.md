@@ -53,8 +53,8 @@ Cada módulo tem seu próprio `README.md` com:
 |---|--------|--------|
 | 1 | Claude Code e Cursor | ✅ Concluído |
 | 2 | Spec Driven Development | ✅ Concluído |
-| 3 | TDD | ⏳ Próximo |
-| 4 | Pull Request Review | — |
+| 3 | TDD | ✅ Concluído |
+| 4 | Pull Request Review | ⏳ Próximo |
 | 5 | Issue Analysis | — |
 | 6 | Prompt Engineering | — |
 | 7 | Context Engineering | — |

@@ -163,6 +163,52 @@ Para retomar: leia o PROGRESS.md e me coloque em contexto
 
 ---
 
+## Sessão 4 — 2026-10-18
+
+### O que foi feito
+
+**Módulo 3: TDD com IA — CONCLUÍDO**
+
+O módulo já existia com toda a estrutura e conteúdo. Nesta sessão foi finalizado com:
+
+| O que foi adicionado | Onde |
+|---------------------|------|
+| Seção "Como usar na prática" | `modules/03-tdd/README.md` |
+| Seção "Como usar na prática" | `modules/01-claude-code-cursor/README.md` |
+| Seção "Como usar na prática" | `modules/02-spec-driven-development/README.md` |
+
+Cada seção tem passos numerados com referências a arquivos específicos do módulo e checklist de conclusão — padrão a ser seguido em todos os módulos futuros.
+
+**Rebrand: DAPIA → AIAD**
+
+Projeto renomeado para AIAD (AI-Assisted Development) em todos os arquivos:
+- 12 arquivos Markdown atualizados
+- Arquivos renomeados: `2026-10-17-dapia-*` → `2026-10-17-aiad-*`
+- Memory renomeada: `project-dapia.md` → `project-aiad.md`
+- Badge AIAD adicionado ao README principal
+
+### Decisões tomadas
+
+- **AIAD** é o nome oficial do projeto — sigla mais limpa que DAPIA
+- Seção "Como usar na prática" é padrão obrigatório em todos os módulos futuros
+- Módulo 3 considerado concluído após adição da camada prática
+
+### Próxima sessão
+
+**Módulo 4 — Pull Request Review**
+
+O que será coberto:
+- O que um revisor de PR deve verificar com e sem IA
+- Prompts prontos para revisão automática de PR
+- Integração com specs do Módulo 2 (spec como critério de aceite)
+- Integração com testes do Módulo 3 (cobertura como gate)
+- Templates de checklist de revisão
+- Skill `/code-review` e `/review-pr`
+
+Para retomar: leia o PROGRESS.md e me coloque em contexto
+
+---
+
 ## Template para próximas sessões
 
 ```

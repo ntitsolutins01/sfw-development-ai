@@ -34,6 +34,16 @@ I'm building a reference repo for AI-assisted development — 15 modules, from s
 
 ---
 
+## 💬 Comentário
+
+> Postar como comentário neste post quando o Módulo 1 for publicado:
+
+**PT:** Módulo 1 publicado — detalhei as 6 camadas de configuração do Claude Code que transformam o terminal em plataforma de engenharia: settings.json, CLAUDE.md (3 níveis), Skills, Rules, MCP servers e Subagents. [link do post do Módulo 1]
+
+**EN:** Module 1 is up — broke down the 6 Claude Code configuration layers that turn the terminal into an engineering platform: settings.json, CLAUDE.md (3 levels), Skills, Rules, MCP servers, and Subagents. [link do post do Módulo 1]
+
+---
+
 ## 🎨 IMAGE PROMPT
 
 A clean tech illustration of a 15-step modular pipeline laid out horizontally across a dark background, each node represented as a glowing hexagon connected by neon cyan lines, with the first hexagon fully illuminated and the remaining ones progressively dimming toward the right — symbolizing a series in progress. Above the pipeline, a faint silhouette of a terminal window with cascading code lines in neon green. The overall composition suggests structured progression, engineering discipline, and an unfolding build process. Style: clean tech illustration, dark background, neon accents, minimalist, professional, no text. Resolution: 1920x1080, landscape, LinkedIn cover format.

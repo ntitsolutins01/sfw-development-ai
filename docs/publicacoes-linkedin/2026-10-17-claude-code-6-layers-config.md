@@ -6,6 +6,16 @@
 
 ---
 
+## 💬 Comentário
+
+> Postar como comentário no post de lançamento da série (https://lnkd.in/p/dpJ8fi3V):
+
+**PT:** Módulo 1 publicado — detalhei as 6 camadas de configuração do Claude Code que transformam o terminal em plataforma de engenharia: settings.json, CLAUDE.md (3 níveis), Skills, Rules, MCP servers e Subagents. [link deste post]
+
+**EN:** Module 1 is up — broke down the 6 Claude Code configuration layers that turn the terminal into an engineering platform: settings.json, CLAUDE.md (3 levels), Skills, Rules, MCP servers, and Subagents. [link deste post]
+
+---
+
 ## 📝 PUBLICAÇÃO — ENGLISH
 
 I structured a 6-layer configuration framework for Claude Code — and most developers use none of them.
