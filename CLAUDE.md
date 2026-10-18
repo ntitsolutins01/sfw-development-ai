@@ -47,13 +47,13 @@ Cada módulo tem seu próprio `README.md` com:
 
 ## Status Atual
 
-> Atualizado em: 2026-10-17
+> Atualizado em: 2026-10-18
 
 | # | Módulo | Status |
 |---|--------|--------|
 | 1 | Claude Code e Cursor | ✅ Concluído |
-| 2 | Spec Driven Development | ⏳ Próximo |
-| 3 | TDD | — |
+| 2 | Spec Driven Development | ✅ Concluído |
+| 3 | TDD | ⏳ Próximo |
 | 4 | Pull Request Review | — |
 | 5 | Issue Analysis | — |
 | 6 | Prompt Engineering | — |

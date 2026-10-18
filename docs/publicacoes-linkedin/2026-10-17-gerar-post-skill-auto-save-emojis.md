@@ -16,7 +16,7 @@ Criei um skill customizado no Claude Code para gerar posts técnicos no LinkedIn
 
 💡 Se você usa Claude Code no dia a dia e ainda não tem skills customizados para tarefas recorrentes, está re-derivando contexto a cada sessão. Qual fluxo do seu workflow mais se beneficiaria de uma instrução persistida? Deixe nos comentários.
 
-#ClaudeCode #SkillEngineering #AIEngineering #PromptEngineering #DevWorkflow #Python #NodeJS #GenerativeAI #LLMOps #ContentAutomation #DAPIA #SoftwareDevelopment #AIAssisted #Automation #OpenSource
+#ClaudeCode #SkillEngineering #AIEngineering #PromptEngineering #DevWorkflow #Python #NodeJS #GenerativeAI #LLMOps #ContentAutomation #AIAD #SoftwareDevelopment #AIAssisted #Automation #OpenSource
 
 ---
 
@@ -30,7 +30,7 @@ Built a custom Claude Code skill to generate technical LinkedIn posts — with a
 
 💡 If you use Claude Code daily and don't have custom skills for recurring tasks, you're re-deriving context on every session. Which workflow in your stack would benefit most from a persisted behavioral instruction? Drop it in the comments.
 
-#ClaudeCode #SkillEngineering #AIEngineering #PromptEngineering #DevWorkflow #Python #NodeJS #GenerativeAI #LLMOps #ContentAutomation #DAPIA #SoftwareDevelopment #AIAssisted #Automation #OpenSource
+#ClaudeCode #SkillEngineering #AIEngineering #PromptEngineering #DevWorkflow #Python #NodeJS #GenerativeAI #LLMOps #ContentAutomation #AIAD #SoftwareDevelopment #AIAssisted #Automation #OpenSource
 
 ---
 

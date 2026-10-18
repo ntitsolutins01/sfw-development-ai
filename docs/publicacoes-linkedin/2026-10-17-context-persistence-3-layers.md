@@ -2,7 +2,7 @@
 
 > Gerado em: 2026-10-17
 > Skill: `/gerar-post`
-> Tema: Sistema de persistência de contexto entre sessões (DAPIA)
+> Tema: Sistema de persistência de contexto entre sessões (AIAD)
 
 ---
 

@@ -31,11 +31,10 @@ Opções:
 ### Opção 1 — Módulo concluído
 
 1. Leia o estado atual:
-   - `PROGRESS.md` (sessão em andamento)
-   - `~/.claude/projects/C--Projetos-POCs-sfw-development-ai/memory/project-dapia.md`
+   - `PROGRESS.md` (sessão em andamento)- `~/.claude/projects/C--Projetos-POCs-sfw-development-ai/memory/project-aiad.md`
    - `CLAUDE.md` (tabela de status)
 
-2. **Atualize a memory** (`project-dapia.md`):
+2. **Atualize a memory** (`project-aiad.md`):
    - Marque o módulo como `[x]` na lista de status
    - Adicione em "O que foi criado": estrutura de arquivos, decisões tomadas
    - Marque o próximo módulo como "PRÓXIMO"
@@ -71,7 +70,7 @@ Opções:
 1. Use `AskUserQuestion` para perguntar:
    **"Descreva a decisão tomada:"** (campo de texto livre)
 
-2. **Atualize a memory** (`project-dapia.md`):
+2. **Atualize a memory** (`project-aiad.md`):
    - Adicione a decisão em `## Decisões tomadas nesta sessão`
    - Formato: `- [data] Decisão: X. Motivo: Y.`
 
@@ -88,7 +87,7 @@ Opções:
 
 1. Leia o estado atual dos 3 mecanismos.
 
-2. **Atualize a memory** (`project-dapia.md`):
+2. **Atualize a memory** (`project-aiad.md`):
    - Adicione tudo que foi criado ou decidido na sessão
    - Atualize o status dos módulos
    - Atualize "Convenção de Sessão" se necessário

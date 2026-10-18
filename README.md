@@ -1,11 +1,11 @@
-## 🤖 DAPIA — Desenvolvimento de Software com IA
+## 🤖 AIAD — AI-Assisted Development
 
-> Repositório de referência do curso **DAPIA** (Pythonando): 15 módulos práticos que cobrem o ciclo completo de desenvolvimento de software assistido por inteligência artificial — do ambiente de trabalho com Claude Code até arquitetura orientada por IA.
+> Repositório de referência do projeto **AIAD**: 15 módulos práticos que cobrem o ciclo completo de desenvolvimento de software assistido por inteligência artificial — do ambiente de trabalho com Claude Code até arquitetura orientada por IA.
 
+![AIAD](https://img.shields.io/badge/AIAD-AI--Assisted_Development-6366F1?style=for-the-badge&logo=robot&logoColor=white)
 ![Claude Code](https://img.shields.io/badge/Claude_Code-CLI-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=for-the-badge&logo=node.js&logoColor=white)
-![DAPIA](https://img.shields.io/badge/Curso-DAPIA-7C3AED?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 ---
@@ -26,7 +26,7 @@
 
 ## 📌 Sobre o Projeto
 
-Repositório educacional com 15 módulos práticos do curso **DAPIA**. Cada módulo aborda um aspecto do desenvolvimento de software moderno assistido por IA — desde configurar o ambiente com Claude Code até construir agentes autônomos, pipelines RAG e sistemas com observabilidade.
+Repositório educacional com 15 módulos práticos do projeto **AIAD**. Cada módulo aborda um aspecto do desenvolvimento de software moderno assistido por IA — desde configurar o ambiente com Claude Code até construir agentes autônomos, pipelines RAG e sistemas com observabilidade.
 
 Os módulos são independentes e progressivos. Você pode estudar em sequência ou ir direto ao módulo que precisar.
 

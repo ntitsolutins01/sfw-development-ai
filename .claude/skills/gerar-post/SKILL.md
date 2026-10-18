@@ -198,7 +198,7 @@ docs/publicacoes-linkedin/YYYY-MM-DD-<slug>.md
 
 **Regras para o nome do arquivo:**
 - `YYYY-MM-DD` = data atual no formato ISO
-- `<slug>` = 3-5 palavras do tema em kebab-case, sem acentos (ex: `dapia-lancamento-serie`, `prompt-caching-api`, `jev-rag-routing`)
+- `<slug>` = 3-5 palavras do tema em kebab-case, sem acentos (ex: `aiad-lancamento-serie`, `prompt-caching-api`, `jev-rag-routing`)
 
 **Estrutura do arquivo:**
 

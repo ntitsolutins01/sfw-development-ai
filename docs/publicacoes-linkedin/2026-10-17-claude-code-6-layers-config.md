@@ -2,7 +2,7 @@
 
 > Gerado em: 2026-10-17
 > Skill: `/gerar-post`
-> Tema: Módulo 1 — Claude Code e Cursor (DAPIA)
+> Tema: Módulo 1 — Claude Code e Cursor (AIAD)
 
 ---
 

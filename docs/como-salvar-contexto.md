@@ -21,7 +21,7 @@ No caso deste projeto:
 ```
 ~/.claude/projects/C--Projetos-POCs-sfw-development-ai/memory/
     ├── MEMORY.md          ← índice (lido automaticamente)
-    └── project-dapia.md   ← memória detalhada do projeto
+    └── project-aiad.md   ← memória detalhada do projeto
 ```
 
 **O que faz:**
@@ -118,7 +118,7 @@ Se não pedir, a IA não sabe que ele existe.
 ┌──────────────────────────────┬──────────────────────────┬─────────────────────────┐
 │          Mecanismo           │        Para quem         │    Atualizado quando    │
 ├──────────────────────────────┼──────────────────────────┼─────────────────────────┤
-│ Memory (project-dapia.md)    │ Claude Code (automático) │ A cada módulo concluído │
+│ Memory (project-aiad.md)    │ Claude Code (automático) │ A cada módulo concluído │
 ├──────────────────────────────┼──────────────────────────┼─────────────────────────┤
 │ Seção de status no CLAUDE.md │ Claude Code + você       │ A cada módulo concluído │
 ├──────────────────────────────┼──────────────────────────┼─────────────────────────┤

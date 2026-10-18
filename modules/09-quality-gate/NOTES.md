@@ -5,7 +5,7 @@
 
 ---
 
-## O que será coberto (referência do curso DAPIA)
+## O que será coberto
 
 - Portões de qualidade em pipelines de software
 - Teste de carga

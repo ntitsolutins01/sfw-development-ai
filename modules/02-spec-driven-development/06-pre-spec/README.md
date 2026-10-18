@@ -379,3 +379,11 @@ docs/
 └── specs/
     └── 2026-10-18-feature-upload.md      ← 03-templates/feature.md
 ```
+
+---
+
+## Exemplos completos de pré-spec
+
+| Arquivo | Cenário | O que demonstra |
+|---------|---------|----------------|
+| [`exemplo-concessionaria-carros.md`](exemplo-concessionaria-carros.md) | IA para vender mais carros exóticos | Fluxo completo em contexto de negócio real: 4 problemas → brainstorm → PRD → TRD → resposta para o CEO |

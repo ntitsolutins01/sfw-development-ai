@@ -107,6 +107,62 @@ Para retomar: leia o PROGRESS.md e me coloque em contexto
 
 ---
 
+## Sessão 3 — 2026-10-18
+
+### O que foi feito
+
+**Módulo 2: Spec Driven Development — CONCLUÍDO**
+
+6 subseções criadas com documentação completa:
+
+| Subseção | Destaque |
+|----------|----------|
+| `01-conceito/` | spec vs ticket vs user story, componentes, anti-padrões, self-test |
+| `02-workflow/` | fluxo expandido completo: brainstorm → PRD → TRD → spec → revisão → implementação → validação |
+| `03-templates/` | 4 templates prontos: feature, bugfix, refactor, api-endpoint |
+| `04-ia-no-fluxo/` | 6 prompts prontos para cada etapa do ciclo + snippet de CLAUDE.md |
+| `05-exemplos/` | 3 specs reais preenchidos: autenticação JWT, timeout upload, GET /users/{id} |
+| `06-pre-spec/` | documentação completa das 3 skills de pré-spec com decisão tree e fluxo ponta a ponta |
+
+**3 skills de pré-spec instaladas em `.claude/skills/`:**
+
+| Skill | Arquivo gerado | O que faz |
+|-------|---------------|-----------|
+| `/brainstorm` | `docs/brainstorms/YYYY-MM-DD-<slug>.md` | Matura ideias, aponta trade-offs, nunca implementa |
+| `/escrever-prd` | `docs/prds/NNN-nome.md` | PRD draft-first com user stories, CAs, métricas |
+| `/escrever-trd` | `docs/trd.md` + `docs/adrs/` | TRD global + ADRs para decisões com impacto amplo |
+
+**README.md da raiz criado** seguindo layout do rag-project:
+- Badges, sumário com âncoras, arquitetura em árvore, tabela de módulos com status
+- Tabela de skills do projeto, progresso visual, seção de autor com badges
+
+**Repositório GitHub criado e módulos 1 e 2 publicados:**
+- URL: https://github.com/ntitsolutins01/sfw-development-ai
+- Commit 1: módulo 1 (estrutura base + shared/ + skills salvar-contexto/gerar-post)
+- Commit 2: módulo 2 + skills brainstorm/escrever-prd/escrever-trd
+
+### Decisões tomadas
+
+- Skills do Fabricio Veronez (brainstorm, PRD, TRD) adaptadas como skills de projeto (não via NPX) para integração total com o fluxo SDD deste projeto
+- TRD é documento global único por projeto — não se repete por feature
+- Docs gerados pelas skills (brainstorms/, prds/, specs/, trd.md, adrs/) são ignorados pelo `.gitignore` — são artefatos de trabalho, não código
+- Fluxo expandido integrado no `02-workflow/README.md`, não como nova subseção isolada
+
+### Próxima sessão
+
+**Módulo 3 — TDD (Test-Driven Development com IA)**
+
+O que será coberto:
+- Ciclo red-green-refactor assistido por IA
+- Como usar specs do Módulo 2 para gerar testes antes da implementação
+- Prompts para cada fase do ciclo TDD
+- Templates de teste (unit, integration, e2e)
+- Exemplos reais com pytest/jest
+
+Para retomar: leia o PROGRESS.md e me coloque em contexto
+
+---
+
 ## Template para próximas sessões
 
 ```
