@@ -44,7 +44,25 @@ Opções:
    - Marque o seguinte como `⏳ Próximo`
    - Atualize a data no campo `> Atualizado em:`
 
-4. **Atualize o `PROGRESS.md`**:
+4. **Atualize o `README.md`** (raiz do projeto):
+   - Na tabela `## 📚 Módulos`: mude o status do módulo de `—` para `✅ Concluído` e adicione o link para a pasta (`[Nome](modules/XX-nome/)`)
+   - Na seção `## 🗺️ Progresso`: mude `—  Módulo X` para `✅ Módulo X`
+   - No rodapé: atualize o contador `Módulos concluídos: N/15`
+   - Na seção `## 🔄 Executando o Projeto Completo (E2E)` → tabela "Passos detalhados":
+     - Substitua `*(em breve)*` pelo link `[📖 Como executar](docs/guia-e2e.md#módulo-X--nome)`
+
+5a. **Atualize o `docs/guia-e2e.md`**:
+   - Localize a seção `## Modulo X: Nome` correspondente (precedida por `<a id="modulo-X"></a>`)
+   - Substitua o bloco `*(em breve)*` pelo guia completo do módulo, seguindo a estrutura dos módulos 1–3:
+     - **Objetivo:** uma linha descrevendo o que o módulo entrega
+     - **O que você vai fazer:** passos numerados com comandos, arquivos a copiar e prompts a usar
+     - **O que valida a conclusão:** checklist com critérios objetivos (sim/não)
+     - Linha de referência — use exatamente este formato (o texto "Referência completa" é o link, sem texto extra):
+       ```
+       **[Referência completa](../modules/XX-nome/README.md)**
+       ```
+
+5. **Atualize o `PROGRESS.md`**:
    - Adicione nova entrada `## Sessão N — YYYY-MM-DD`
    - Seções: "O que foi feito", "Decisões tomadas", "Próxima sessão"
    - Numere a sessão corretamente (leia as entradas anteriores)

@@ -129,7 +129,7 @@ Leia o README de modules/01-claude-code-cursor/ e me ajude a configurar o ambien
 |---|--------|--------|-------------------|
 | 1 | [Claude Code e Cursor](modules/01-claude-code-cursor/) | ✅ Concluído | Configuração, skills, rules, MCP servers, subagents |
 | 2 | [Spec Driven Development](modules/02-spec-driven-development/) | ✅ Concluído | Brainstorm → PRD → TRD → spec → implementação → validação |
-| 3 | TDD | — | Ciclo red-green-refactor assistido por IA |
+| 3 | [TDD](modules/03-tdd/) | ✅ Concluído | Ciclo red-green-refactor assistido por IA |
 | 4 | Pull Request Review | — | Revisão automática com checklist e severidade |
 | 5 | Issue Analysis | — | Análise e decomposição de issues com IA |
 | 6 | Prompt Engineering | — | Técnicas avançadas de engenharia de prompts |
@@ -170,12 +170,98 @@ Skills disponíveis em `.claude/skills/` — invoque pelo nome como mensagem no 
 
 ---
 
+## 🔄 Executando o Projeto Completo (E2E)
+
+Guia para testar o projeto do início ao fim, módulo por módulo. Cada módulo produz um artefato que alimenta o próximo. Siga a sequência — os módulos foram projetados para encadear.
+
+> Cada passo tem um link para o **"Como usar na prática"** do módulo correspondente, onde estão os passos detalhados e o checklist de conclusão.
+
+---
+
+### Pré-requisitos
+
+Antes de começar, verifique:
+- [ ] `claude --version` retorna sem erro
+- [ ] `ANTHROPIC_API_KEY` configurada no ambiente
+- [ ] Repositório clonado e aberto no Claude Code (`claude` na raiz)
+
+---
+
+### Fluxo E2E
+
+```
+Módulo 1 → Ambiente configurado
+    ↓  settings.json + CLAUDE.md + skills + rules prontos
+Módulo 2 → Spec da feature escrito
+    ↓  docs/specs/NNN-nome.md com critérios de aceite
+Módulo 3 → Testes escritos e verdes
+    ↓  pytest / npm test passando para todos os CAs do spec
+Módulo 4 → PR revisado com checklist
+    ↓  (em breve)
+Módulo 5 → Issue analisada e decomposta
+    ↓  (em breve)
+Módulo 6 → Prompts otimizados
+    ↓  (em breve)
+Módulo 7 → Contexto gerenciado em sessões longas
+    ↓  (em breve)
+Módulo 8 → Vulnerabilidades OWASP identificadas e mitigadas
+    ↓  (em breve)
+Módulo 9 → Quality gates configurados no pipeline
+    ↓  (em breve)
+Módulo 10 → Análise de segurança executada
+    ↓  (em breve)
+Módulo 11 → Loop autônomo rodando
+    ↓  (em breve)
+Módulo 12 → Agente Hermes operacional
+    ↓  (em breve)
+Módulo 13 → Observabilidade ativa (logs + métricas + traces)
+    ↓  (em breve)
+Módulo 14 → LLM avaliando qualidade das respostas
+    ↓  (em breve)
+Módulo 15 → Arquitetura AI-first documentada
+```
+
+---
+
+### Passos detalhados
+
+> Cada módulo abaixo tem um guia completo com objetivo, passo a passo e checklist de validação — incluindo qual exemplo usar e o que esperar ao final.
+
+| # | Módulo | O que cobre | Guia E2E                                                              |
+|---|--------|-------------|-----------------------------------------------------------------------|
+| 1 | Claude Code e Cursor | Configuração, skills, rules, MCP servers, subagents | [📖 Como executar](docs/guia-e2e.md#modulo1)                         |
+| 2 | Spec Driven Development | Brainstorm → PRD → TRD → spec → implementação → validação | [📖 Como executar](../docs/guia-e2e.md#modulo2) |
+| 3 | TDD | Ciclo red-green-refactor assistido por IA | [📖 Como executar](../docs/guia-e2e.md#modulo3)                     |
+| 4 | Pull Request Review | Revisão automatizada de PR com checklist de severidade | *(em breve)*                                                          |
+| 5 | Issue Analysis | Decomposição de issues em tasks verificáveis com IA | *(em breve)*                                                          |
+| 6 | Prompt Engineering | Otimização de prompts para o ciclo de desenvolvimento | *(em breve)*                                                          |
+| 7 | Context Engineering | Gerenciamento de contexto em sessões longas | *(em breve)*                                                          |
+| 8 | OWASP Top 10 | Identificação e mitigação das 10 vulnerabilidades OWASP | *(em breve)*                                                          |
+| 9 | Quality Gate | Gates de qualidade: cobertura, complexidade, segurança | *(em breve)*                                                          |
+| 10 | Análises de Segurança | Análise estática e dinâmica de segurança com IA | *(em breve)*                                                          |
+| 11 | Loop Engineering | Loops autônomos com self-healing e auto-correção | *(em breve)*                                                          |
+| 12 | Hermes Agent | Agente com memória, ferramentas e autonomia | *(em breve)*                                                          |
+| 13 | Observabilidade | Logs, métricas e traces integrados ao fluxo de desenvolvimento | *(em breve)*                                                          |
+| 14 | LLM as a Judge | Pipeline de avaliação automática de qualidade de respostas LLM | *(em breve)*                                                          |
+| 15 | Arquitetura | Padrões de arquitetura AI-first documentados e implementados | *(em breve)*                                                          |
+
+---
+
+### Critério de conclusão do projeto
+
+O projeto está completo quando:
+- [ ] Os 15 módulos têm status `✅` nesta tabela
+- [ ] O fluxo Módulo 1 → 3 foi executado com uma feature real (spec → testes → código verde)
+- [ ] Todos os checklists de "Como usar na prática" estão marcados
+
+---
+
 ## 🗺️ Progresso
 
 ```text
 ✅ Módulo 1  — Claude Code e Cursor
 ✅ Módulo 2  — Spec Driven Development
-—  Módulo 3  — TDD
+✅ Módulo 3  — TDD
 —  Módulo 4  — Pull Request Review
 —  Módulo 5  — Issue Analysis
 —  Módulo 6  — Prompt Engineering
@@ -227,4 +313,4 @@ Feito com 💙 por **Fábio Muniz**
 
 ---
 
-**Versão:** 1.0.0 · **Status:** 🚧 Em desenvolvimento · **Módulos concluídos:** 2/15
+**Versão:** 1.0.0 · **Status:** 🚧 Em desenvolvimento · **Módulos concluídos:** 3/15
