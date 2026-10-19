@@ -277,6 +277,46 @@ Para retomar: leia o PROGRESS.md e me coloque em contexto
 
 ---
 
+## Sessão 7 — 2026-10-19
+
+### O que foi feito
+
+**Módulo 4: Pull Request Review — CONCLUÍDO**
+
+| Subseção | Destaque |
+|----------|----------|
+| `01-conceito/` | 5 dimensões de revisão (funcional, testes, segurança, performance, qualidade), 4 categorias de severidade, anti-padrões |
+| `02-workflow/` | Fluxo completo com diagrama: self-review → /code-review → /review-pr → revisão humana |
+| `03-templates/` | 3 checklists prontos: feature, bugfix, refactor |
+| `04-ia-no-fluxo/` | 6 prompts: revisão geral, conformidade spec, cobertura de testes, segurança, performance, sumário executivo |
+| `05-exemplos/` | 3 revisões reais: JWT auth (continuação M2+M3), bugfix timeout, refatoração UserRepository |
+
+**Skill `/review-pr` criada** em `.claude/skills/review-pr/SKILL.md`:
+- Coleta diff com `git diff main...HEAD`
+- Revisa em 4 dimensões: bugs/qualidade, segurança, testes, conformidade com spec
+- Emite decisão formal: APROVADO / APROVADO COM RESSALVAS / SOLICITAR MUDANÇAS
+
+### Decisões tomadas
+
+- `/code-review` (Módulo 1) e `/review-pr` (Módulo 4) são complementares: code-review cobre qualidade geral, review-pr adiciona conformidade com spec
+- Módulo 4 fecha o ciclo SDD+TDD: spec (M2) → testes (M3) → revisão (M4)
+- Exemplos conectados à série JWT dos módulos anteriores — narrativa contínua
+
+### Próxima sessão
+
+**Módulo 5 — Issue Analysis**
+
+O que será coberto:
+- Como usar IA para analisar issues e decompor em tasks verificáveis
+- Prompts para extrair critérios de aceite de uma issue
+- Templates de issue bem escrita (bug, feature, task)
+- Integração com spec do Módulo 2 (issue → spec)
+- Exemplos reais de análise de issue com IA
+
+Para retomar: leia o PROGRESS.md e me coloque em contexto
+
+---
+
 ## Template para próximas sessões
 
 ```

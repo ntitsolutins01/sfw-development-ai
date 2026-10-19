@@ -126,9 +126,38 @@ claude
 
 ---
 
-## Modulo 4: Pull Request Review
+## Modulo 4 Pull Request Review
 
-*(em breve — será preenchido quando o módulo for concluído)*
+**Objetivo:** revisar o código do Módulo 3 contra o spec do Módulo 2, verificar cobertura de testes e emitir uma decisão formal de aprovação.
+
+**O que você vai fazer:**
+
+1. Instale a skill `/review-pr` no projeto de prova:
+   Copie `modules/04-pull-request-review/../../../.claude/skills/review-pr/SKILL.md` para `.claude/skills/review-pr/SKILL.md` no projeto de prova
+
+2. Abra `modules/04-pull-request-review/03-templates/checklist-feature.md` e percorra cada item para o branch do JWT (resultado do Módulo 3)
+
+3. No Claude Code com o branch `feature/autenticacao-jwt` ativo, execute:
+   ```
+   /code-review
+   ```
+   Corrija todos os achados CRÍTICO e ALTO antes de continuar.
+
+4. Execute a revisão com spec:
+   ```
+   /review-pr docs/specs/001-autenticacao-jwt.md
+   ```
+   Corrija os CAs marcados como AUSENTE ou PARCIAL.
+
+5. Re-execute `/review-pr` após as correções até obter `APROVADO`.
+
+**O que valida a conclusão:**
+- [ ] Checklist de self-review percorrido sem itens abertos
+- [ ] `/code-review` executado — zero CRÍTICO, zero ALTO no resultado final
+- [ ] `/review-pr` retorna APROVADO com todos os 5 CAs do spec marcados como cobertos
+- [ ] `pytest` passando 100% após as correções
+
+**[Referência completa](../modules/04-pull-request-review/README.md)**
 
 ---
 

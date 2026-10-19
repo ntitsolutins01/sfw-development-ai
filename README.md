@@ -130,7 +130,7 @@ Leia o README de modules/01-claude-code-cursor/ e me ajude a configurar o ambien
 | 1 | [Claude Code e Cursor](modules/01-claude-code-cursor/) | ✅ Concluído | Configuração, skills, rules, MCP servers, subagents |
 | 2 | [Spec Driven Development](modules/02-spec-driven-development/) | ✅ Concluído | Brainstorm → PRD → TRD → spec → implementação → validação |
 | 3 | [TDD](modules/03-tdd/) | ✅ Concluído | Ciclo red-green-refactor assistido por IA |
-| 4 | Pull Request Review | — | Revisão automática com checklist e severidade |
+| 4 | [Pull Request Review](modules/04-pull-request-review/) | ✅ Concluído | Revisão automática com checklist e severidade |
 | 5 | Issue Analysis | — | Análise e decomposição de issues com IA |
 | 6 | Prompt Engineering | — | Técnicas avançadas de engenharia de prompts |
 | 7 | Context Engineering | — | Gerenciamento de contexto em sessões longas |
@@ -232,7 +232,7 @@ Módulo 15 → Arquitetura AI-first documentada
 | 1 | Claude Code e Cursor | Configuração, skills, rules, MCP servers, subagents | [📖 Como executar](docs/guia-e2e.md#modulo1)                         |
 | 2 | Spec Driven Development | Brainstorm → PRD → TRD → spec → implementação → validação | [📖 Como executar](../docs/guia-e2e.md#modulo2) |
 | 3 | TDD | Ciclo red-green-refactor assistido por IA | [📖 Como executar](../docs/guia-e2e.md#modulo3)                     |
-| 4 | Pull Request Review | Revisão automatizada de PR com checklist de severidade | *(em breve)*                                                          |
+| 4 | Pull Request Review | Revisão automatizada de PR com checklist de severidade | [📖 Como executar](docs/guia-e2e.md#modulo-4-pull-request-review) |
 | 5 | Issue Analysis | Decomposição de issues em tasks verificáveis com IA | *(em breve)*                                                          |
 | 6 | Prompt Engineering | Otimização de prompts para o ciclo de desenvolvimento | *(em breve)*                                                          |
 | 7 | Context Engineering | Gerenciamento de contexto em sessões longas | *(em breve)*                                                          |
@@ -262,7 +262,7 @@ O projeto está completo quando:
 ✅ Módulo 1  — Claude Code e Cursor
 ✅ Módulo 2  — Spec Driven Development
 ✅ Módulo 3  — TDD
-—  Módulo 4  — Pull Request Review
+✅ Módulo 4  — Pull Request Review
 —  Módulo 5  — Issue Analysis
 —  Módulo 6  — Prompt Engineering
 —  Módulo 7  — Context Engineering
@@ -313,4 +313,4 @@ Feito com 💙 por **Fábio Muniz**
 
 ---
 
-**Versão:** 1.0.0 · **Status:** 🚧 Em desenvolvimento · **Módulos concluídos:** 3/15
+**Versão:** 1.0.0 · **Status:** 🚧 Em desenvolvimento · **Módulos concluídos:** 4/15
