@@ -209,6 +209,74 @@ Para retomar: leia o PROGRESS.md e me coloque em contexto
 
 ---
 
+## Sessão 5 — 2026-10-18
+
+### O que foi feito
+
+**Ciclo de publicação LinkedIn — CONCLUÍDO**
+
+Estrutura de posts da série AIAD organizada e vinculada:
+
+| Arquivo | O que foi feito |
+|---------|----------------|
+| `2026-10-17-aiad-lancamento-serie-15-modulos.md` | `💬 Comentário` adicionado para vincular ao post do Módulo 1 quando publicado |
+| `2026-10-17-claude-code-6-layers-config.md` | `💬 Comentário` para postar no lançamento da série + GitHub removido |
+| `2026-10-17-context-persistence-3-layers.md` | `💬 Comentário de Extensão` (extensão do Módulo 1) + versão PT adicionada + melhorias |
+| `2026-10-18-spec-driven-development-modulo-2.md` | `💬 Comentário` para lançamento + GitHub removido |
+| `2026-10-18-tdd-com-ia-modulo-3.md` | Criado + `💬 Comentário` para lançamento + GitHub removido |
+
+**Padrão de série estabelecido:**
+- Cada post tem seção `## 💬 Comentário` com texto PT + EN pronto para postar no post de lançamento
+- Post de persistência de contexto tem `## 💬 Comentário de Extensão` — vincula ao post do Módulo 1 como extensão natural
+- Placeholder `[link deste post]` a ser substituído pelo link real no momento da publicação
+- GitHub removido dos posts de módulo (fica só no post de lançamento da série)
+
+### Decisões tomadas
+
+- Posts de módulo não carregam link do GitHub — sobrecarrega o post; o link fica no lançamento da série
+- Post de persistência de contexto é extensão do Módulo 1, não um post independente — `💬 Comentário de Extensão` deixa isso explícito
+- Padrão `💬 Comentário` passa a ser gerado automaticamente pelo `/gerar-post` em módulos futuros
+
+### Próxima sessão
+
+**Módulo 4 — Pull Request Review**
+
+O que será coberto:
+- O que um revisor de PR deve verificar com e sem IA
+- Prompts prontos para revisão automática de PR
+- Integração com specs do Módulo 2 (spec como critério de aceite)
+- Integração com testes do Módulo 3 (cobertura como gate)
+- Templates de checklist de revisão
+- Skill `/code-review` e `/review-pr`
+
+Para retomar: leia o PROGRESS.md e me coloque em contexto
+
+---
+
+## Sessão 6 — 2026-10-19
+
+### O que foi feito
+
+**Infraestrutura de documentação E2E — EM ANDAMENTO (Módulo 4 ainda não iniciado)**
+
+| O que foi criado/corrigido | Detalhe |
+|---------------------------|---------|
+| `docs/guia-e2e.md` | Arquivo criado — guia E2E completo com JWT auth como projeto de prova; módulos 1–3 detalhados com objetivo, passos, checklist e link de referência |
+| `README.md` — seção E2E | Coluna "O que cobre" adicionada com descrição objetiva dos 15 módulos; links "Como executar" corrigidos |
+| Âncoras de navegação | Cabeçalhos simplificados para ASCII puro (`## Modulo N Nome`, sem acento, sem `:`) para compatibilidade VS Code + GitHub |
+| Links "Referência completa" | Padronizados como `**[Referência completa](../modules/XX/README.md)**` em todos os módulos do guia |
+| `salvar-contexto/SKILL.md` | Padrões de cabeçalho e link atualizados para módulos futuros |
+
+### Estado atual (pausa)
+
+**O que foi feito:** guia E2E criado e navegação corrigida. Commit e push realizados.
+
+**O que falta para fechar esta camada:**
+- Nenhuma pendência de documentação — guia E2E está funcional
+- Próximo passo real: iniciar Módulo 4 (Pull Request Review)
+
+---
+
 ## Template para próximas sessões
 
 ```
