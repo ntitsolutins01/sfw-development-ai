@@ -131,7 +131,7 @@ Leia o README de modules/01-claude-code-cursor/ e me ajude a configurar o ambien
 | 2 | [Spec Driven Development](modules/02-spec-driven-development/) | ✅ Concluído | Brainstorm → PRD → TRD → spec → implementação → validação |
 | 3 | [TDD](modules/03-tdd/) | ✅ Concluído | Ciclo red-green-refactor assistido por IA |
 | 4 | [Pull Request Review](modules/04-pull-request-review/) | ✅ Concluído | Revisão automática com checklist e severidade |
-| 5 | Issue Analysis | — | Análise e decomposição de issues com IA |
+| 5 | [Issue Analysis](modules/05-issue-analysis/) | ✅ Concluído | Análise e decomposição de issues com IA |
 | 6 | Prompt Engineering | — | Técnicas avançadas de engenharia de prompts |
 | 7 | Context Engineering | — | Gerenciamento de contexto em sessões longas |
 | 8 | OWASP Top 10 | — | Identificação e mitigação de vulnerabilidades |
@@ -165,6 +165,8 @@ Skills disponíveis em `.claude/skills/` — invoque pelo nome como mensagem no 
 | **brainstorm** | `/brainstorm sobre <tema>` | Matura ideias, aponta trade-offs, não implementa nada até você pedir |
 | **escrever-prd** | `/escrever-prd` | Gera PRD em `docs/prds/` com user stories, critérios de aceite e métricas |
 | **escrever-trd** | `/escrever-trd` | Cria/atualiza `docs/trd.md` com stack, arquitetura, NFRs e ADRs |
+| **review-pr** | `/review-pr [spec]` | Revisa PR em 4 dimensões e emite decisão formal (APROVADO / SOLICITAR MUDANÇAS) |
+| **analyze-issue** | `/analyze-issue [issue]` | Analisa issue, decompõe em tasks atômicas com CAs e gera stub de spec |
 | **gerar-post** | `/gerar-post sobre <tema>` | Gera publicação LinkedIn em PT e EN com prompt de imagem |
 | **salvar-contexto** | `/salvar-contexto` | Salva o estado da sessão nos 3 mecanismos de persistência do projeto |
 
@@ -233,7 +235,7 @@ Módulo 15 → Arquitetura AI-first documentada
 | 2 | Spec Driven Development | Brainstorm → PRD → TRD → spec → implementação → validação | [📖 Como executar](../docs/guia-e2e.md#modulo2) |
 | 3 | TDD | Ciclo red-green-refactor assistido por IA | [📖 Como executar](../docs/guia-e2e.md#modulo3)                     |
 | 4 | Pull Request Review | Revisão automatizada de PR com checklist de severidade | [📖 Como executar](docs/guia-e2e.md#modulo-4-pull-request-review) |
-| 5 | Issue Analysis | Decomposição de issues em tasks verificáveis com IA | *(em breve)*                                                          |
+| 5 | Issue Analysis | Decomposição de issues em tasks verificáveis com IA | [📖 Como executar](docs/guia-e2e.md#modulo-5-issue-analysis) |
 | 6 | Prompt Engineering | Otimização de prompts para o ciclo de desenvolvimento | *(em breve)*                                                          |
 | 7 | Context Engineering | Gerenciamento de contexto em sessões longas | *(em breve)*                                                          |
 | 8 | OWASP Top 10 | Identificação e mitigação das 10 vulnerabilidades OWASP | *(em breve)*                                                          |
@@ -263,7 +265,7 @@ O projeto está completo quando:
 ✅ Módulo 2  — Spec Driven Development
 ✅ Módulo 3  — TDD
 ✅ Módulo 4  — Pull Request Review
-—  Módulo 5  — Issue Analysis
+✅ Módulo 5  — Issue Analysis
 —  Módulo 6  — Prompt Engineering
 —  Módulo 7  — Context Engineering
 —  Módulo 8  — OWASP Top 10
@@ -313,4 +315,4 @@ Feito com 💙 por **Fábio Muniz**
 
 ---
 
-**Versão:** 1.0.0 · **Status:** 🚧 Em desenvolvimento · **Módulos concluídos:** 4/15
+**Versão:** 1.0.0 · **Status:** 🚧 Em desenvolvimento · **Módulos concluídos:** 5/15

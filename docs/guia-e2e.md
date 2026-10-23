@@ -161,9 +161,44 @@ claude
 
 ---
 
-## Modulo 5: Issue Analysis
+## Modulo 5 Issue Analysis
 
-*(em breve — será preenchido quando o módulo for concluído)*
+**Objetivo:** usar IA para analisar uma issue mal definida, decompô-la em tasks atômicas com critérios de aceite verificáveis e gerar o stub de spec pronto para o Módulo 2.
+
+**O que você vai fazer:**
+
+1. Copie a skill `/analyze-issue` para o projeto de prova:
+   Copie `.claude/skills/analyze-issue/SKILL.md` para `.claude/skills/analyze-issue/SKILL.md` no projeto de prova
+
+2. Crie uma issue bruta de exemplo no projeto de prova (use este texto como ponto de partida):
+   ```
+   [FEAT] Adicionar suporte a refresh token
+
+   Usuários ficam deslogados após 24h. Precisamos de refresh token
+   para que a sessão seja renovada automaticamente.
+   Prioridade: Média
+   ```
+
+3. Execute a análise de issue:
+   ```
+   /analyze-issue
+   ```
+   Cole o texto da issue quando solicitado. A IA vai classificar o tipo, identificar ambiguidades e fazer perguntas de clarificação.
+
+4. Responda as perguntas de clarificação (ou peça para a IA assumir valores razoáveis). Use as perguntas de `modules/05-issue-analysis/04-ia-no-fluxo/README.md` como referência se preferir o fluxo manual.
+
+5. Confirme a decomposição em tasks: a IA deve produzir ao menos 2 tasks atômicas com CAs no formato `dado/quando/então`.
+
+6. Ao final, a IA vai gerar e salvar o arquivo `docs/specs/002-refresh-token.md` — verifique se o stub tem os campos obrigatórios (contexto, escopo, CAs, campos em aberto).
+
+**O que valida a conclusão:**
+- [ ] Issue classificada como Feature com tipo e escopo definidos
+- [ ] Ao menos 2 tasks atômicas identificadas, cada uma testável em isolamento
+- [ ] Cada task tem ao menos 1 CA para caso feliz e 1 para caso de falha
+- [ ] `docs/specs/002-refresh-token.md` existe com CAs numerados (CA-1, CA-2...)
+- [ ] Os campos em aberto do spec estão listados (prontos para o Módulo 2 completar)
+
+**[Referência completa](../modules/05-issue-analysis/README.md)**
 
 ---
 

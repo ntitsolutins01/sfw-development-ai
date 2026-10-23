@@ -317,6 +317,51 @@ Para retomar: leia o PROGRESS.md e me coloque em contexto
 
 ---
 
+## Sessão 8 — 2026-10-23
+
+### O que foi feito
+
+**Módulo 5: Issue Analysis — CONCLUÍDO**
+
+| Subseção | Destaque |
+|----------|----------|
+| `01-conceito/` | 3 tipos de issue (Bug/Feature/Task), triângulo de analisabilidade (Escopo + CAs + DoD), anti-padrões |
+| `02-workflow/` | Fluxo completo: análise → clarificação → decomposição → CAs → spec stub |
+| `03-templates/` | 3 templates prontos: issue-bug.md, issue-feature.md, issue-task.md |
+| `04-ia-no-fluxo/` | 6 prompts: análise inicial, decomposição, extração de CAs, priorização, estimativa, geração de spec stub |
+| `05-exemplos/` | 3 análises reais: JWT auth feature, upload timeout bug, UserService refactor task |
+
+**Skill `/analyze-issue` criada** em `.claude/skills/analyze-issue/SKILL.md`:
+- Aceita URL do GitHub, caminho de arquivo ou texto colado
+- 6 passos: obter issue → análise inicial → decomposição → CAs → spec stub → resumo
+- Salva spec stub em `docs/specs/NNN-[slug].md`
+
+**Tracking files atualizados:**
+- `README.md` — Módulo 5 ✅ Concluído, skill `analyze-issue` na tabela, E2E link adicionado, contador 5/15
+- `CLAUDE.md` — Módulo 5 ✅, Módulo 6 ⏳ Próximo, data atualizada
+- `docs/guia-e2e.md` — seção `## Modulo 5 Issue Analysis` preenchida com objetivo, passos e checklist
+
+### Decisões tomadas
+
+- `/analyze-issue` sem argumento → pede para o usuário colar o texto (mais flexível que só aceitar URLs)
+- Spec stub salvo em `docs/specs/NNN-[slug].md` para integração direta com o Módulo 2
+- Exemplos do módulo usam a série JWT (continuidade com módulos anteriores) + bug upload + refactor UserService
+
+### Próxima sessão
+
+**Módulo 6 — Prompt Engineering**
+
+O que será coberto:
+- Técnicas avançadas de engenharia de prompts (zero-shot, few-shot, chain-of-thought, etc.)
+- Como estruturar prompts para tarefas de desenvolvimento de software
+- Prompts para cada fase do ciclo AIAD
+- Anti-padrões e como identificá-los
+- Exemplos comparativos: prompt ruim vs prompt bem estruturado
+
+Para retomar: leia o PROGRESS.md e me coloque em contexto
+
+---
+
 ## Template para próximas sessões
 
 ```
