@@ -12,7 +12,7 @@
 
 **PT:** Módulo 3 publicado — TDD com IA: ciclo red-green-refactor com 6 prompts prontos, 3 templates (unit-pytest, unit-jest, integration-pytest) e 3 exemplos reais ligados aos specs do Módulo 2. Verificação binária: verde ou vermelho, sem interpretação. [link deste post]
 
-**EN:** Module 3 is up — TDD with AI: red-green-refactor cycle with 6 ready prompts, 3 templates (unit-pytest, unit-jest, integration-pytest), and 3 real examples linked to Module 2 specs. Binary verification: green or red, no room for interpretation. [link deste post]
+**EN:** Module 3 is up — TDD with AI: red-green-refactor cycle with 6 ready prompts, 3 templates (unit-pytest, unit-jest, integration-pytest), and 3 real examples linked to Module 2 specs. Binary verification: green or red, no room for interpretation. https://lnkd.in/p/dbZ6ea42
 
 ---
 
