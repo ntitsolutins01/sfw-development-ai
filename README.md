@@ -133,7 +133,7 @@ Leia o README de modules/01-claude-code-cursor/ e me ajude a configurar o ambien
 | 4 | [Pull Request Review](modules/04-pull-request-review/) | ✅ Concluído | Revisão automática com checklist e severidade |
 | 5 | [Issue Analysis](modules/05-issue-analysis/) | ✅ Concluído | Análise e decomposição de issues com IA |
 | 6 | [Prompt Engineering](modules/06-prompt-engineering/) | ✅ Concluído | Técnicas avançadas de engenharia de prompts |
-| 7 | Context Engineering | — | Gerenciamento de contexto em sessões longas |
+| 7 | [Context Engineering](modules/07-context-engineering/) | ✅ Concluído | Gerenciamento de contexto em sessões longas |
 | 8 | OWASP Top 10 | — | Identificação e mitigação de vulnerabilidades |
 | 9 | Quality Gate | — | Portões de qualidade em pipelines de software |
 | 10 | Análises de Segurança | — | Análise estática e dinâmica de segurança |
@@ -237,7 +237,7 @@ Módulo 15 → Arquitetura AI-first documentada
 | 4 | Pull Request Review | Revisão automatizada de PR com checklist de severidade | [📖 Como executar](docs/guia-e2e.md#modulo-4-pull-request-review) |
 | 5 | Issue Analysis | Decomposição de issues em tasks verificáveis com IA | [📖 Como executar](docs/guia-e2e.md#modulo-5-issue-analysis) |
 | 6 | Prompt Engineering | Otimização de prompts para o ciclo de desenvolvimento | [📖 Como executar](docs/guia-e2e.md#modulo-6-prompt-engineering) |
-| 7 | Context Engineering | Gerenciamento de contexto em sessões longas | *(em breve)*                                                          |
+| 7 | Context Engineering | Gerenciamento de contexto em sessões longas | [📖 Como executar](docs/guia-e2e.md#modulo-7-context-engineering) |
 | 8 | OWASP Top 10 | Identificação e mitigação das 10 vulnerabilidades OWASP | *(em breve)*                                                          |
 | 9 | Quality Gate | Gates de qualidade: cobertura, complexidade, segurança | *(em breve)*                                                          |
 | 10 | Análises de Segurança | Análise estática e dinâmica de segurança com IA | *(em breve)*                                                          |
@@ -267,7 +267,7 @@ O projeto está completo quando:
 ✅ Módulo 4  — Pull Request Review
 ✅ Módulo 5  — Issue Analysis
 ✅ Módulo 6  — Prompt Engineering
-—  Módulo 7  — Context Engineering
+✅ Módulo 7  — Context Engineering
 —  Módulo 8  — OWASP Top 10
 —  Módulo 9  — Quality Gate
 —  Módulo 10 — Análises de Segurança
@@ -315,4 +315,4 @@ Feito com 💙 por **Fábio Muniz**
 
 ---
 
-**Versão:** 1.0.0 · **Status:** 🚧 Em desenvolvimento · **Módulos concluídos:** 6/15
+**Versão:** 1.0.0 · **Status:** 🚧 Em desenvolvimento · **Módulos concluídos:** 7/15

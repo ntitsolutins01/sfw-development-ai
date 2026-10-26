@@ -233,9 +233,31 @@ claude
 
 ---
 
-## Modulo 7: Context Engineering
+## Modulo 7 Context Engineering
 
-*(em breve — será preenchido quando o módulo for concluído)*
+**Objetivo:** estruturar as 4 camadas de contexto do Claude Code para que cada sessão comece com informação relevante e termine com o estado persistido — sem precisar re-explicar o projeto toda vez.
+
+**O que você vai fazer:**
+
+1. Leia `modules/07-context-engineering/01-conceito/README.md` — identifique quais das 4 camadas (memory, rules, CLAUDE.md, conversa) você já usa no projeto de prova e quais estão faltando
+
+2. Revise o CLAUDE.md do projeto de prova usando o template em `modules/07-context-engineering/03-templates/claude-md-projeto.md`. Verifique se tem: stack, estrutura de pastas, regras de desenvolvimento, status atual e instrução de retomada
+
+3. Abra uma nova sessão do Claude Code no projeto de prova e use o prompt de `modules/07-context-engineering/03-templates/prompt-retomada.md` para iniciar. Confirme que o modelo consegue responder corretamente: o que foi feito, o que falta, em qual arquivo trabalhar
+
+4. Execute uma sessão de trabalho curta (implementar ou corrigir algo pequeno no JWT). Quando a sessão tiver >30 trocas, execute `/compact` e depois verifique se o modelo ainda conhece os CAs pendentes
+
+5. Estude `modules/07-context-engineering/05-exemplos/multiplos-agentes.md` — identifique uma situação no seu projeto onde um fresh agent independente seria mais útil do que continuar na mesma sessão
+
+6. Ao encerrar, use `/salvar-contexto` para persistir nos 3 mecanismos e verifique que a seção "Próxima sessão" do PROGRESS.md está específica o suficiente para uma boa retomada
+
+**O que valida a conclusão:**
+- [ ] CLAUDE.md do projeto de prova tem as 5 seções mínimas (stack, estrutura, regras, status, retomada)
+- [ ] Prompt de retomada usado com sucesso — modelo confirmou o contexto antes de começar
+- [ ] `/compact` executado e contexto essencial verificado após compactação
+- [ ] Você sabe distinguir: quando usar `/compact` vs nova sessão vs fork vs fresh agent
+
+**[Referência completa](../modules/07-context-engineering/README.md)**
 
 ---
 

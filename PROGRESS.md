@@ -399,6 +399,40 @@ Para retomar: leia o PROGRESS.md e me coloque em contexto
 
 ---
 
+## Sessão 10 — 2026-10-26
+
+### O que foi feito
+
+**Módulo 7: Context Engineering — CONCLUÍDO**
+
+| Subseção | Destaque |
+|----------|----------|
+| `01-conceito/` | 4 camadas de contexto (memory/rules/CLAUDE.md/conversa), problema da janela finita, trade-off rico vs relevante, anti-padrões |
+| `02-workflow/` | Ciclo seed→trabalho→compactar→persistir→retomar, estratégia por tipo de tarefa |
+| `03-templates/` | 3 templates: CLAUDE.md mínimo viável (com exemplo JWT), prompt de retomada (4 variações), context seed (implementação/debug/revisão) |
+| `04-ia-no-fluxo/` | /compact (quando, o que preserva), fork agent vs fresh agent (comparativo), gestão dos 3 mecanismos de persistência |
+| `05-exemplos/` | Sessão longa (quando usar /compact), múltiplos agentes (fork pesquisa + fresh revisão), retomada de sessão (PROGRESS.md específico) |
+
+### Decisões tomadas
+
+- Módulo 7 usa o próprio AIAD como exemplo principal: os 3 mecanismos do projeto (memory + CLAUDE.md + PROGRESS.md) são a implementação concreta dos conceitos ensinados
+- Templates de retomada têm 4 variações por situação: padrão, interrupção longa, tarefa específica, continuação da mesma semana
+
+### Próxima sessão
+
+**Módulo 8 — OWASP Top 10**
+
+O que será coberto:
+- As 10 vulnerabilidades mais críticas segundo OWASP e como identificá-las com IA
+- Injection, Broken Auth, XSS, IDOR e as demais categorias aplicadas ao projeto JWT
+- Prompts para análise de segurança por categoria OWASP
+- Templates de checklist de segurança por tipo de endpoint
+- Exemplos de vulnerabilidades no projeto JWT e como corrigi-las com IA
+
+Para retomar: leia o PROGRESS.md e me coloque em contexto
+
+---
+
 ## Template para próximas sessões
 
 ```
