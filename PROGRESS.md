@@ -362,6 +362,43 @@ Para retomar: leia o PROGRESS.md e me coloque em contexto
 
 ---
 
+## Sessão 9 — 2026-10-26
+
+### O que foi feito
+
+**Módulo 6: Prompt Engineering — CONCLUÍDO**
+
+| Subseção | Destaque |
+|----------|----------|
+| `01-conceito/` | Framework CIFER (Contexto/Instrução/Formato/Exemplos/Restrições), 6 técnicas, tabela de anti-padrões |
+| `02-workflow/` | Ciclo escrever→testar→medir→refinar, tabela de técnicas por módulo AIAD, diagnóstico rápido |
+| `03-templates/` | 3 templates prontos: geração de código (zero-shot+CIFER), debug (CoT), refatoração (constrained) |
+| `04-ia-no-fluxo/` | 6 técnicas com prompts reais do projeto JWT + como combinar técnicas |
+| `05-exemplos/` | 3 comparativos antes/depois: verify_token (geração), token 401 (debug), AuthService (refatoração) |
+
+**Decisão de design:** sem skill dedicada — as técnicas são aplicadas diretamente nos prompts das skills dos outros módulos.
+
+### Decisões tomadas
+
+- Módulo 6 sem skill própria: as técnicas são conhecimento aplicado, não automatizável em uma skill
+- Framework CIFER como denominador comum de todos os templates (C + I mínimo, todos os 5 para tarefas complexas)
+- Exemplos conectados à série JWT — mesmo projeto de prova dos módulos anteriores
+
+### Próxima sessão
+
+**Módulo 7 — Context Engineering**
+
+O que será coberto:
+- Gerenciamento de contexto em sessões longas com Claude Code
+- Como e quando usar CLAUDE.md, Rules, skills e memória do projeto
+- Técnicas para manter contexto relevante sem poluir o contexto
+- Estratégias de chunking e sumarização para projetos grandes
+- Como o módulo 7 se integra com os módulos anteriores (specs, testes, PRs)
+
+Para retomar: leia o PROGRESS.md e me coloque em contexto
+
+---
+
 ## Template para próximas sessões
 
 ```

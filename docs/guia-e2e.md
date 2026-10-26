@@ -202,9 +202,34 @@ claude
 
 ---
 
-## Modulo 6: Prompt Engineering
+## Modulo 6 Prompt Engineering
 
-*(em breve — será preenchido quando o módulo for concluído)*
+**Objetivo:** aprender o framework CIFER e as 6 técnicas de engenharia de prompts para melhorar a qualidade de todas as interações com o Claude Code no ciclo AIAD.
+
+**O que você vai fazer:**
+
+1. Leia `modules/06-prompt-engineering/01-conceito/README.md` e identifique nos seus prompts atuais quais componentes do CIFER estão ausentes
+
+2. Pegue um prompt que você usou nos módulos anteriores (ex: "gere testes para o auth service") e reescreva usando o template em `modules/06-prompt-engineering/03-templates/prompt-geracao-codigo.md`
+
+3. Compare as duas respostas (prompt original vs. com CIFER) e identifique a diferença de precisão
+
+4. Estude os comparativos de `modules/06-prompt-engineering/05-exemplos/`:
+   - `antes-depois-geracao.md` — verify_token: prompt vago vs. CIFER completo
+   - `antes-depois-debug.md` — token 401: lista genérica vs. chain-of-thought
+   - `antes-depois-refatoracao.md` — AuthService: sem restrições vs. constrained
+
+5. Aplique chain-of-thought em um bug real: se o seu sistema JWT tiver qualquer comportamento inesperado, use o template `prompt-debug.md` com a instrução "analise passo a passo antes de sugerir a correção"
+
+6. Consulte a tabela "Onde cada técnica se encaixa" em `modules/06-prompt-engineering/02-workflow/README.md` e marque quais técnicas você usará em cada módulo restante
+
+**O que valida a conclusão:**
+- [ ] Framework CIFER identificado nos seus prompts — você sabe qual componente costuma faltar
+- [ ] Ao menos um prompt reescrito com CIFER produziu resposta melhor na primeira tentativa
+- [ ] Você consegue dizer quando usar few-shot vs. chain-of-thought vs. role prompting
+- [ ] Comparativos antes/depois lidos — você identificou o anti-padrão em cada um
+
+**[Referência completa](../modules/06-prompt-engineering/README.md)**
 
 ---
 

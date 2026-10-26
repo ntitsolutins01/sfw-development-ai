@@ -132,7 +132,7 @@ Leia o README de modules/01-claude-code-cursor/ e me ajude a configurar o ambien
 | 3 | [TDD](modules/03-tdd/) | ✅ Concluído | Ciclo red-green-refactor assistido por IA |
 | 4 | [Pull Request Review](modules/04-pull-request-review/) | ✅ Concluído | Revisão automática com checklist e severidade |
 | 5 | [Issue Analysis](modules/05-issue-analysis/) | ✅ Concluído | Análise e decomposição de issues com IA |
-| 6 | Prompt Engineering | — | Técnicas avançadas de engenharia de prompts |
+| 6 | [Prompt Engineering](modules/06-prompt-engineering/) | ✅ Concluído | Técnicas avançadas de engenharia de prompts |
 | 7 | Context Engineering | — | Gerenciamento de contexto em sessões longas |
 | 8 | OWASP Top 10 | — | Identificação e mitigação de vulnerabilidades |
 | 9 | Quality Gate | — | Portões de qualidade em pipelines de software |
@@ -236,7 +236,7 @@ Módulo 15 → Arquitetura AI-first documentada
 | 3 | TDD | Ciclo red-green-refactor assistido por IA | [📖 Como executar](../docs/guia-e2e.md#modulo3)                     |
 | 4 | Pull Request Review | Revisão automatizada de PR com checklist de severidade | [📖 Como executar](docs/guia-e2e.md#modulo-4-pull-request-review) |
 | 5 | Issue Analysis | Decomposição de issues em tasks verificáveis com IA | [📖 Como executar](docs/guia-e2e.md#modulo-5-issue-analysis) |
-| 6 | Prompt Engineering | Otimização de prompts para o ciclo de desenvolvimento | *(em breve)*                                                          |
+| 6 | Prompt Engineering | Otimização de prompts para o ciclo de desenvolvimento | [📖 Como executar](docs/guia-e2e.md#modulo-6-prompt-engineering) |
 | 7 | Context Engineering | Gerenciamento de contexto em sessões longas | *(em breve)*                                                          |
 | 8 | OWASP Top 10 | Identificação e mitigação das 10 vulnerabilidades OWASP | *(em breve)*                                                          |
 | 9 | Quality Gate | Gates de qualidade: cobertura, complexidade, segurança | *(em breve)*                                                          |
@@ -266,7 +266,7 @@ O projeto está completo quando:
 ✅ Módulo 3  — TDD
 ✅ Módulo 4  — Pull Request Review
 ✅ Módulo 5  — Issue Analysis
-—  Módulo 6  — Prompt Engineering
+✅ Módulo 6  — Prompt Engineering
 —  Módulo 7  — Context Engineering
 —  Módulo 8  — OWASP Top 10
 —  Módulo 9  — Quality Gate
@@ -315,4 +315,4 @@ Feito com 💙 por **Fábio Muniz**
 
 ---
 
-**Versão:** 1.0.0 · **Status:** 🚧 Em desenvolvimento · **Módulos concluídos:** 5/15
+**Versão:** 1.0.0 · **Status:** 🚧 Em desenvolvimento · **Módulos concluídos:** 6/15

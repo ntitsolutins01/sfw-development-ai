@@ -47,7 +47,7 @@ Cada módulo tem seu próprio `README.md` com:
 
 ## Status Atual
 
-> Atualizado em: 2026-10-23
+> Atualizado em: 2026-10-26
 
 | # | Módulo | Status |
 |---|--------|--------|
@@ -56,8 +56,8 @@ Cada módulo tem seu próprio `README.md` com:
 | 3 | TDD | ✅ Concluído |
 | 4 | Pull Request Review | ✅ Concluído |
 | 5 | Issue Analysis | ✅ Concluído |
-| 6 | Prompt Engineering | ⏳ Próximo |
-| 7 | Context Engineering | — |
+| 6 | Prompt Engineering | ✅ Concluído |
+| 7 | Context Engineering | ⏳ Próximo |
 | 8 | OWASP Top 10 | — |
 | 9 | Quality Gate | — |
 | 10 | Análises de Segurança | — |
