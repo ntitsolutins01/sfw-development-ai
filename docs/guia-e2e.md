@@ -261,9 +261,39 @@ claude
 
 ---
 
-## Modulo 8: OWASP Top 10
+## Modulo 8 OWASP Top 10
 
-*(em breve — será preenchido quando o módulo for concluído)*
+**Objetivo:** auditar o sistema JWT contra as 10 categorias OWASP, identificar vulnerabilidades com severidade, corrigir CRÍTICO e ALTO antes do deploy.
+
+**O que você vai fazer:**
+
+1. Copie a skill `/audit-owasp` para o projeto de prova:
+   Copie `.claude/skills/audit-owasp/SKILL.md` para `.claude/skills/audit-owasp/SKILL.md` no projeto de prova
+
+2. Leia `modules/08-owasp-top-10/01-conceito/README.md` — identifique quais das 6 categorias mapeadas para o projeto JWT você já mitigou (M3+M4) e quais precisam ser verificadas
+
+3. Execute a auditoria no arquivo principal de autenticação:
+   ```
+   /audit-owasp app/services/auth.py
+   ```
+   Aguarde o relatório estruturado com achados por categoria (A01–A10)
+
+4. Leia os exemplos em `modules/08-owasp-top-10/05-exemplos/` para entender os padrões dos 3 achados mais comuns no projeto JWT (A01, A02, A07)
+
+5. Para cada achado CRÍTICO e ALTO, peça a correção diretamente ao Claude Code usando o template de `modules/08-owasp-top-10/03-templates/audit-owasp.md` — seção "Template de Prompt para Correção"
+
+6. Após cada correção, re-execute `/audit-owasp` no arquivo corrigido e rode `pytest` para confirmar que nada quebrou
+
+7. Documente os achados MÉDIO em `docs/security/findings/` usando o template `modules/08-owasp-top-10/03-templates/finding-report.md`
+
+**O que valida a conclusão:**
+- [ ] Auditoria executada em ao menos 2 arquivos (ex: `auth.py` e o router de autenticação)
+- [ ] Zero CRÍTICO e zero ALTO nos arquivos auditados após as correções
+- [ ] `pytest` passando 100% após todas as correções
+- [ ] Ao menos 1 achado MÉDIO documentado em `docs/security/findings/`
+- [ ] Você sabe explicar a diferença entre A01 (controle de acesso) e A07 (falhas de autenticação)
+
+**[Referência completa](../modules/08-owasp-top-10/README.md)**
 
 ---
 

@@ -433,6 +433,47 @@ Para retomar: leia o PROGRESS.md e me coloque em contexto
 
 ---
 
+## Sessão 11 — 2026-10-26
+
+### O que foi feito
+
+**Módulo 8: OWASP Top 10 — CONCLUÍDO**
+
+| Subseção | Destaque |
+|----------|----------|
+| `01-conceito/` | As 10 categorias OWASP 2021, mapeamento para o projeto JWT (6 de 10 aplicáveis), por que IA muda a auditoria, anti-padrão do checklist binário |
+| `02-workflow/` | Pipeline inventory → analyze → triage → fix → verify, tabela de severidade (CRÍTICO→INFO), integração no fluxo AIAD após M4, cadência recomendada |
+| `03-templates/` | Prompt de auditoria completa, prompts por categoria (A01/A02/A03/A07/A09), template de correção, finding-report.md |
+| `04-ia-no-fluxo/` | Como invocar `/audit-owasp`, exemplo de saída completa, como usar os resultados, limitações (A06 requer pip audit, A04 requer visão arquitetural) |
+| `05-exemplos/` | A01 Broken Access Control (IDOR em /user/profile), A02 Crypto Failures (JWT_SECRET fraco + algoritmo none), A07 Auth Failures (sem rate limit + sem log) |
+
+**Skill `/audit-owasp` criada** em `.claude/skills/audit-owasp/SKILL.md`:
+- Aceita arquivo(s) como argumento ou pergunta se não informado
+- 5 etapas: scan → analyze (10 categorias) → report estruturado → fix (CRÍTICO/ALTO) → verify
+- Critérios detalhados por categoria no SKILL.md
+- A06 sempre marcada como "requer pip audit externo"
+
+### Decisões tomadas
+
+- Exemplos focam em A01, A02 e A07 — as 3 categorias com maior impacto direto no projeto JWT
+- A04 (Insecure Design) e A06 (Outdated Components) documentadas com limitação explícita: precisam de julgamento humano e ferramentas externas respectivamente
+- Rate limit padrão sugerido de 5/min por IP com nota sobre Redis para produção com múltiplos workers
+
+### Próxima sessão
+
+**Módulo 9 — Quality Gate**
+
+O que será coberto:
+- O que são quality gates e onde se encaixam no pipeline CI/CD
+- Cobertura de testes como gate (threshold mínimo)
+- Análise estática (linting, type checking) como gate
+- Integração com resultados do OWASP audit (M8) como gate de segurança
+- Configuração de gates no GitHub Actions / pipeline local
+
+Para retomar: leia o PROGRESS.md e me coloque em contexto
+
+---
+
 ## Template para próximas sessões
 
 ```

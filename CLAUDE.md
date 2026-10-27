@@ -47,7 +47,7 @@ Cada módulo tem seu próprio `README.md` com:
 
 ## Status Atual
 
-> Atualizado em: 2026-10-26 (M7)
+> Atualizado em: 2026-10-26 (M8)
 
 | # | Módulo | Status |
 |---|--------|--------|
@@ -58,8 +58,8 @@ Cada módulo tem seu próprio `README.md` com:
 | 5 | Issue Analysis | ✅ Concluído |
 | 6 | Prompt Engineering | ✅ Concluído |
 | 7 | Context Engineering | ✅ Concluído |
-| 8 | OWASP Top 10 | ⏳ Próximo |
-| 9 | Quality Gate | — |
+| 8 | OWASP Top 10 | ✅ Concluído |
+| 9 | Quality Gate | ⏳ Próximo |
 | 10 | Análises de Segurança | — |
 | 11 | Loop Engineering | — |
 | 12 | Hermes Agent | — |
