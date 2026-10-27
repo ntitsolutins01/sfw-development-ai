@@ -297,9 +297,45 @@ claude
 
 ---
 
-## Modulo 9: Quality Gate
+## Modulo 9 Quality Gate
 
-*(em breve — será preenchido quando o módulo for concluído)*
+**Objetivo:** configurar quality gates (cobertura, complexidade, segurança) no projeto JWT, integrá-los ao GitHub Actions, e entender como o mesmo conceito se aplica a pipelines LLM.
+
+**O que você vai fazer:**
+
+1. Copie a skill `/quality-gate` para o projeto de prova:
+   Copie `.claude/skills/quality-gate/SKILL.md` para `.claude/skills/quality-gate/SKILL.md` no projeto de prova
+
+2. Execute `/quality-gate` sem configuração prévia — a skill vai reportar todos os gates como AUSENTE e medir o estado atual. Anote a cobertura atual antes de configurar qualquer threshold
+
+3. Configure o gate de cobertura no projeto de prova:
+   - Copie o template de `modules/09-quality-gate/03-templates/pytest-cov.md` para `pyproject.toml`
+   - Defina o threshold como (cobertura medida no passo 2) − 5%
+   - Rode `pytest` e confirme que o gate passa com o threshold inicial
+
+4. Configure o gate de complexidade:
+   - Instale radon: `pip install radon`
+   - Rode `radon cc app/ -s -a` e identifique as funções com maior complexidade
+   - Se alguma função estiver em grade D ou F, refatore antes de configurar o gate
+   - Adicione o target `complexity-check` ao Makefile usando o template de `03-templates/radon-complexity.md`
+
+5. Execute `/quality-gate` novamente — desta vez os gates de cobertura e complexidade devem estar CONFIGURADOS. Confirme que ambos passam
+
+6. Gere o workflow de GitHub Actions:
+   - Copie o template de `modules/09-quality-gate/03-templates/github-actions-gates.md`
+   - Salve em `.github/workflows/quality-gates.yml` no projeto de prova
+   - Faça um commit — o workflow deve aparecer na aba Actions do GitHub
+
+7. Leia `modules/09-quality-gate/05-exemplos/llm-pipeline-gate.md` e identifique onde no seu pipeline (se tiver um) um Intent Gate ou Chunk Scorer faria sentido
+
+**O que valida a conclusão:**
+- [ ] `/quality-gate` executado — cobertura e complexidade reportados como PASSOU
+- [ ] `pyproject.toml` tem threshold de coverage configurado
+- [ ] Makefile tem target `quality` que roda todos os gates
+- [ ] `.github/workflows/quality-gates.yml` criado e gates passando no CI
+- [ ] Você sabe explicar por que "gate que só avisa" não é um gate
+
+**[Referência completa](../modules/09-quality-gate/README.md)**
 
 ---
 

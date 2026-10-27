@@ -474,6 +474,48 @@ Para retomar: leia o PROGRESS.md e me coloque em contexto
 
 ---
 
+## Sessão 12 — 2026-10-26
+
+### O que foi feito
+
+**Módulo 9: Quality Gate — CONCLUÍDO**
+
+| Subseção | Destaque |
+|----------|----------|
+| `01-conceito/` | 3 tipos de gate (estático/dinâmico/performance), onde se encaixam no pipeline, extensão para LLM pipelines (JEV como gate), anti-padrões |
+| `02-workflow/` | Pipeline define→implementar→integrar→monitorar→ajustar, como calibrar thresholds iniciais, decisão gate no PR vs gate no deploy |
+| `03-templates/` | pytest-cov (pyproject.toml + setup.cfg + Makefile + prompts), radon (Makefile + script Python + prompts), GitHub Actions completo (6 gates sequenciais) |
+| `04-ia-no-fluxo/` | Skill `/quality-gate`, exemplo de saída completa, como usar resultados para coverage/complexidade/ausente, fluxo de adoção em 3 semanas |
+| `05-exemplos/` | coverage-gate (token_blocklist 43%→96%, total 78%→90%), complexity-gate (verify_token D→A via extração de 3 funções), llm-pipeline-gate (JEV como gate + observabilidade) |
+
+**Skill `/quality-gate` criada** em `.claude/skills/quality-gate/SKILL.md`:
+- Detecta configuração existente (pyproject.toml, Makefile, GitHub Actions)
+- Executa via Bash: pytest-cov, radon, bandit, pip-audit
+- Reporta PASSOU/FALHOU/AUSENTE por gate
+- Para falhas/ausentes: oferece gerar correção ou configuração
+
+**NOTES.md aproveitado:** JEV como exemplo concreto de quality gate em LLM pipeline documentado em `05-exemplos/llm-pipeline-gate.md`.
+
+### Decisões tomadas
+
+- Gate de complexidade usa radon com threshold grade C (score ≤ 10) — equilibrio entre qualidade e adoção
+- Threshold inicial de coverage = medição atual − 5% para não bloquear o projeto imediatamente
+- LLM pipeline gate documentado como extensão do conceito, não como gate separado — reusa `shared/jev/` já existente
+
+### Próxima sessão
+
+**Módulo 10 — Análises de Segurança**
+
+O que será coberto:
+- Análise estática de segurança além do OWASP (bandit em profundidade, semgrep)
+- Análise de dependências (pip-audit, Safety, Snyk)
+- Integração com CI/CD como gate de segurança contínuo
+- Como usar IA para interpretar e priorizar findings de ferramentas de análise estática
+
+Para retomar: leia o PROGRESS.md e me coloque em contexto
+
+---
+
 ## Template para próximas sessões
 
 ```

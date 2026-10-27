@@ -135,7 +135,7 @@ Leia o README de modules/01-claude-code-cursor/ e me ajude a configurar o ambien
 | 6 | [Prompt Engineering](modules/06-prompt-engineering/) | ✅ Concluído | Técnicas avançadas de engenharia de prompts |
 | 7 | [Context Engineering](modules/07-context-engineering/) | ✅ Concluído | Gerenciamento de contexto em sessões longas |
 | 8 | [OWASP Top 10](modules/08-owasp-top-10/) | ✅ Concluído | Identificação e mitigação das 10 categorias OWASP com IA |
-| 9 | Quality Gate | — | Portões de qualidade em pipelines de software |
+| 9 | [Quality Gate](modules/09-quality-gate/) | ✅ Concluído | Gates de qualidade: cobertura, complexidade, segurança e LLM pipelines |
 | 10 | Análises de Segurança | — | Análise estática e dinâmica de segurança |
 | 11 | Loop Engineering | — | Loops autônomos e self-healing com IA |
 | 12 | Hermes Agent | — | Agente autônomo com memória e ferramentas |
@@ -168,6 +168,7 @@ Skills disponíveis em `.claude/skills/` — invoque pelo nome como mensagem no 
 | **review-pr** | `/review-pr [spec]` | Revisa PR em 4 dimensões e emite decisão formal (APROVADO / SOLICITAR MUDANÇAS) |
 | **analyze-issue** | `/analyze-issue [issue]` | Analisa issue, decompõe em tasks atômicas com CAs e gera stub de spec |
 | **audit-owasp** | `/audit-owasp [arquivo]` | Audita arquivo contra OWASP Top 10, categoriza achados por severidade e oferece correções |
+| **quality-gate** | `/quality-gate [--coverage|--complexity|--security]` | Verifica quality gates (coverage, complexidade, bandit, pip-audit) e reporta PASSOU/FALHOU/AUSENTE |
 | **gerar-post** | `/gerar-post sobre <tema>` | Gera publicação LinkedIn em PT e EN com prompt de imagem |
 | **salvar-contexto** | `/salvar-contexto` | Salva o estado da sessão nos 3 mecanismos de persistência do projeto |
 
@@ -240,7 +241,7 @@ Módulo 15 → Arquitetura AI-first documentada
 | 6 | Prompt Engineering | Otimização de prompts para o ciclo de desenvolvimento | [📖 Como executar](docs/guia-e2e.md#modulo-6-prompt-engineering) |
 | 7 | Context Engineering | Gerenciamento de contexto em sessões longas | [📖 Como executar](docs/guia-e2e.md#modulo-7-context-engineering) |
 | 8 | OWASP Top 10 | Identificação e mitigação das 10 vulnerabilidades OWASP | [📖 Como executar](docs/guia-e2e.md#modulo-8-owasp-top-10)            |
-| 9 | Quality Gate | Gates de qualidade: cobertura, complexidade, segurança | *(em breve)*                                                          |
+| 9 | Quality Gate | Gates de qualidade: cobertura, complexidade, segurança e LLM pipelines | [📖 Como executar](docs/guia-e2e.md#modulo-9-quality-gate)          |
 | 10 | Análises de Segurança | Análise estática e dinâmica de segurança com IA | *(em breve)*                                                          |
 | 11 | Loop Engineering | Loops autônomos com self-healing e auto-correção | *(em breve)*                                                          |
 | 12 | Hermes Agent | Agente com memória, ferramentas e autonomia | *(em breve)*                                                          |
@@ -270,7 +271,7 @@ O projeto está completo quando:
 ✅ Módulo 6  — Prompt Engineering
 ✅ Módulo 7  — Context Engineering
 ✅ Módulo 8  — OWASP Top 10
-—  Módulo 9  — Quality Gate
+✅ Módulo 9  — Quality Gate
 —  Módulo 10 — Análises de Segurança
 —  Módulo 11 — Loop Engineering
 —  Módulo 12 — Hermes Agent
@@ -316,4 +317,4 @@ Feito com 💙 por **Fábio Muniz**
 
 ---
 
-**Versão:** 1.0.0 · **Status:** 🚧 Em desenvolvimento · **Módulos concluídos:** 8/15
+**Versão:** 1.0.0 · **Status:** 🚧 Em desenvolvimento · **Módulos concluídos:** 9/15
